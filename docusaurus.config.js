@@ -1,6 +1,6 @@
-
 module.exports = {
   title: 'Tech Writer Docs Portfolio',
+  tagline: 'Showcasing Documentation Skills',
   url: 'https://your-username.github.io',
   baseUrl: '/tech-writer-docs-portfolio/',
   onBrokenLinks: 'throw',
