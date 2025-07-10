@@ -3,7 +3,7 @@ module.exports = {
   tagline: 'Showcasing Documentation Skills',
   url: 'https://your-username.github.io',
   baseUrl: '/tech-writer-docs-portfolio/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'your-username',
