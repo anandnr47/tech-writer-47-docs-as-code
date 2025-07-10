@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktech_writer_docs_portfolio=self.webpackChunktech_writer_docs_portfolio||[]).push([[634],{192:(r,t,e)=>{e.r(t),e.d(t,{default:()=>s});e(6540);var o=e(6347),c=e(4848);function s(){return(0,c.jsx)(o.rd,{to:"/intro"})}}}]);
