@@ -1,8 +1,8 @@
 module.exports = {
-  title: 'Tech Writer Docs Portfolio',
+  title: 'Tech Writer 47 Docs As Code Portfolio',
   tagline: 'Showcasing Documentation Skills',
   url: 'https://your-username.github.io',
-  baseUrl: '/tech-writer-docs-portfolio/',
+  baseUrl: '/tech-writer-47-docs-as-code/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
