@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Tech Writer 47 Docs As Code Portfolio',
   tagline: 'Showcasing Documentation Skills',
-  url: 'https://your-username.github.io',
+  url: 'https://anandnr47.github.io',
   baseUrl: '/tech-writer-47-docs-as-code/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
