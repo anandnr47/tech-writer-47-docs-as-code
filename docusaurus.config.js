@@ -6,8 +6,8 @@ module.exports = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'your-username',
-  projectName: 'tech-writer-docs-portfolio',
+  organizationName: 'anandnr47',
+  projectName: 'tech-writer-47-docs-as-code',
   presets: [
     [
       'classic',
