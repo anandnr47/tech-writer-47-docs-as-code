@@ -1,0 +1,81 @@
+{
+  "/tech-writer-47-docs-as-code/__docusaurus/debug-04e": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---tech-writer-47-docs-as-code-docusaurus-debugb-38-c08"
+    }
+  },
+  "/tech-writer-47-docs-as-code/__docusaurus/debug/config-2f4": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---tech-writer-47-docs-as-code-docusaurus-debugb-38-c08"
+    }
+  },
+  "/tech-writer-47-docs-as-code/__docusaurus/debug/content-46d": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---tech-writer-47-docs-as-code-docusaurus-debugb-38-c08"
+    },
+    "__props": "__props---tech-writer-47-docs-as-code-docusaurus-debug-content-829-0fc"
+  },
+  "/tech-writer-47-docs-as-code/__docusaurus/debug/globalData-215": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---tech-writer-47-docs-as-code-docusaurus-debugb-38-c08"
+    }
+  },
+  "/tech-writer-47-docs-as-code/__docusaurus/debug/metadata-7ab": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---tech-writer-47-docs-as-code-docusaurus-debugb-38-c08"
+    }
+  },
+  "/tech-writer-47-docs-as-code/__docusaurus/debug/registry-1ba": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---tech-writer-47-docs-as-code-docusaurus-debugb-38-c08"
+    }
+  },
+  "/tech-writer-47-docs-as-code/__docusaurus/debug/routes-32c": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---tech-writer-47-docs-as-code-docusaurus-debugb-38-c08"
+    }
+  },
+  "/tech-writer-47-docs-as-code/-779": {
+    "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
+    "__context": {
+      "plugin": "plugin---tech-writer-47-docs-as-code-a-74-a64"
+    },
+    "config": "config---tech-writer-47-docs-as-code-5-e-9-00a"
+  },
+  "/tech-writer-47-docs-as-code/-dc2": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---tech-writer-47-docs-as-code-aba-207"
+    }
+  },
+  "/tech-writer-47-docs-as-code/-a40": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---tech-writer-47-docs-as-code-aac-148"
+  },
+  "/tech-writer-47-docs-as-code/-de3": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/tech-writer-47-docs-as-code/api/login-614": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tech-writer-47-docs-as-code-api-loginc-10-a43"
+  },
+  "/tech-writer-47-docs-as-code/dummy-00e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tech-writer-47-docs-as-code-dummyb-99-73c"
+  },
+  "/tech-writer-47-docs-as-code/tutorials/getting-started-770": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tech-writer-47-docs-as-code-tutorials-getting-started-8-e-3-04e"
+  },
+  "/tech-writer-47-docs-as-code/-ca9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tech-writer-47-docs-as-code-intro-0-e-3-bd0"
+  }
+}

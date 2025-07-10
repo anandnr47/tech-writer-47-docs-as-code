@@ -1,0 +1,23 @@
+{
+  "id": "dummy",
+  "title": "dummy",
+  "description": "",
+  "source": "@site/docs/dummy.md",
+  "sourceDirName": ".",
+  "slug": "/dummy",
+  "permalink": "/tech-writer-47-docs-as-code/dummy",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "POST /api/v1/login",
+    "permalink": "/tech-writer-47-docs-as-code/api/login"
+  },
+  "next": {
+    "title": "Welcome",
+    "permalink": "/tech-writer-47-docs-as-code/"
+  }
+}

@@ -1,7 +1,7 @@
 ---
 id: intro
 title: Welcome
-slug: /intro
+slug: /
 ---
 
 # Welcome to My Tech Writing Portfolio

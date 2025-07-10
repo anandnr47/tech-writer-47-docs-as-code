@@ -1,0 +1,48 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/tech-writer-47-docs-as-code/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/tech-writer-47-docs-as-code/",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "api/login",
+              "path": "/tech-writer-47-docs-as-code/api/login",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "dummy",
+              "path": "/tech-writer-47-docs-as-code/dummy",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/tech-writer-47-docs-as-code/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/getting-started",
+              "path": "/tech-writer-47-docs-as-code/tutorials/getting-started",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/tech-writer-47-docs-as-code/api/login",
+                "label": "api/login"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "intro",
+  "title": "Welcome",
+  "description": "This is a sample documentation site built using Docusaurus to showcase my writing, API documentation, and docs-as-code skills.",
+  "source": "@site/docs/intro.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/tech-writer-47-docs-as-code/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "intro",
+    "title": "Welcome",
+    "slug": "/"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "dummy",
+    "permalink": "/tech-writer-47-docs-as-code/dummy"
+  },
+  "next": {
+    "title": "Getting Started",
+    "permalink": "/tech-writer-47-docs-as-code/tutorials/getting-started"
+  }
+}
