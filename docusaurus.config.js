@@ -20,5 +20,9 @@ module.exports = {
         },
       },
     ],
+   docs: {
+     routeBasePath: '/', // 👈 this makes docs/intro the homepage
+     sidebarPath: require.resolve('./sidebars.js'),
+   },
   ],
 };
