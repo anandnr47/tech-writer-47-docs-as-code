@@ -1,7 +1,8 @@
-# Welcome to My Documentation Portfolio
+---
+id: intro
+title: Welcome
+---
 
-This site showcases sample documentation using the Docs-as-Code approach.
+# Welcome to My Technical Writing Portfolio
 
-- ✍️ Written in Markdown
-- ⚙️ Built with Docusaurus
-- 🚀 Deployed via GitHub Pages
+This site showcases sample API docs, tutorials, and reference material authored in Markdown using Docusaurus.
