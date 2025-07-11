@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktech_writer_docs_portfolio=self.webpackChunktech_writer_docs_portfolio||[]).push([[903],{1912:o=>{o.exports=JSON.parse('{"blogBasePath":"/tech-writer-47-docs-as-code/blog","blogTitle":"Blog","authorsListPath":"/tech-writer-47-docs-as-code/blog/authors"}')}}]);

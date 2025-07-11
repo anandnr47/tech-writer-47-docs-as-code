@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktech_writer_docs_portfolio=self.webpackChunktech_writer_docs_portfolio||[]).push([[887],{7153:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/tech-writer-47-docs-as-code/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

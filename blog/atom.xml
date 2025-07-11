@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://anandnr47.github.io/tech-writer-47-docs-as-code/blog</id>
+    <title>Docs as Code Portfolio Blog</title>
+    <updated>2024-07-01T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://anandnr47.github.io/tech-writer-47-docs-as-code/blog"/>
+    <subtitle>Docs as Code Portfolio Blog</subtitle>
+    <icon>https://anandnr47.github.io/tech-writer-47-docs-as-code/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Creative Posts]]></title>
+        <id>https://anandnr47.github.io/tech-writer-47-docs-as-code/blog/first-post</id>
+        <link href="https://anandnr47.github.io/tech-writer-47-docs-as-code/blog/first-post"/>
+        <updated>2024-07-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This is a sample blog post.]]></summary>
+        <content type="html"><![CDATA[<p>This is a sample blog post.</p>]]></content>
+        <category label="welcome" term="welcome"/>
+    </entry>
+</feed>

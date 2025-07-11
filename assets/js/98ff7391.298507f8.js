@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktech_writer_docs_portfolio=self.webpackChunktech_writer_docs_portfolio||[]).push([[960],{6143:e=>{e.exports=JSON.parse('{"tags":[{"label":"welcome","permalink":"/tech-writer-47-docs-as-code/blog/tags/welcome","count":1}]}')}}]);
