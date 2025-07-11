@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktech_writer_docs_portfolio=self.webpackChunktech_writer_docs_portfolio||[]).push([[472],{5513:t=>{t.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"first-post","permalink":"/tech-writer-47-docs-as-code/blog/2024/07/01/first-post","unlisted":false,"date":"2024-07-01T00:00:00.000Z"}]}')}}]);
