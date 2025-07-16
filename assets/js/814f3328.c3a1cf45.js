@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktech_writer_docs_portfolio=self.webpackChunktech_writer_docs_portfolio||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"My Journey \u2014 From Engineer to Tech Writer","permalink":"/tech-writer-47-docs-as-code/blog/my-journey-to-tech-writing","unlisted":false,"date":"2024-07-01T00:00:00.000Z"}]}')}}]);
