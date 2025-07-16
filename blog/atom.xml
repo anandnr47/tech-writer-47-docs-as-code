@@ -14,23 +14,12 @@
         <updated>2024-07-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[---]]></summary>
         <content type="html"><![CDATA[<hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="slug-first-posttitle-first-posttags-hello-docusaurus">slug: first-post
-title: First Post
-tags: [hello, docusaurus]<a href="https://anandnr47.github.io/tech-writer-47-docs-as-code/blog/2024/07/01/first-post#slug-first-posttitle-first-posttags-hello-docusaurus" class="hash-link" aria-label="Direct link to slug: first-post
-title: First Post
-tags: [hello, docusaurus]" title="Direct link to slug: first-post
-title: First Post
-tags: [hello, docusaurus]">​</a></h2>
-<hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="slug-my-journey-to-tech-writingtitle-my-journey--from-engineer-to-tech-writerauthors-anandtags-career-tech-writing-journey">slug: my-journey-to-tech-writing
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="slug-my-journey-to-tech-writingtitle-my-journey--from-engineer-to-tech-writertags-career-tech-writing-journey">slug: my-journey-to-tech-writing
 title: My Journey — From Engineer to Tech Writer
-authors: [anand]
-tags: [career, tech writing, journey]<a href="https://anandnr47.github.io/tech-writer-47-docs-as-code/blog/2024/07/01/first-post#slug-my-journey-to-tech-writingtitle-my-journey--from-engineer-to-tech-writerauthors-anandtags-career-tech-writing-journey" class="hash-link" aria-label="Direct link to slug: my-journey-to-tech-writing
+tags: [career, tech writing, journey]<a href="https://anandnr47.github.io/tech-writer-47-docs-as-code/blog/2024/07/01/first-post#slug-my-journey-to-tech-writingtitle-my-journey--from-engineer-to-tech-writertags-career-tech-writing-journey" class="hash-link" aria-label="Direct link to slug: my-journey-to-tech-writing
 title: My Journey — From Engineer to Tech Writer
-authors: [anand]
 tags: [career, tech writing, journey]" title="Direct link to slug: my-journey-to-tech-writing
 title: My Journey — From Engineer to Tech Writer
-authors: [anand]
 tags: [career, tech writing, journey]">​</a></h2>
 <h1>🛣️ From Engineer to Tech Writer: My Story</h1>
 <p>Ever since graduating from the <strong>Amrita School of Engineering</strong> and starting my career at <strong>SAP Ariba</strong>, I was fascinated by how complex systems could be broken down into clear, usable guides and thoughtful documentation. My path to tech writing wasn't planned—it grew naturally from a desire to <strong>bridge the gap between code and people</strong>.</p>
@@ -38,17 +27,17 @@ tags: [career, tech writing, journey]">​</a></h2>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="-my-early-engineering-days">🎓 My Early Engineering Days<a href="https://anandnr47.github.io/tech-writer-47-docs-as-code/blog/2024/07/01/first-post#-my-early-engineering-days" class="hash-link" aria-label="Direct link to 🎓 My Early Engineering Days" title="Direct link to 🎓 My Early Engineering Days">​</a></h2>
 <p>At university, I thrived on solving technical problems. Between labs and assignments, I started writing technical posts for classmates—whether explaining networking concepts or breaking down programming assignments. That early experience taught me how to <strong>structure ideas for readability and clarity</strong>.</p>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-first-steps-at-sap-ariba">🔧 First Steps at SAP Ariba<a href="https://anandnr47.github.io/tech-writer-47-docs-as-code/blog/2024/07/01/first-post#-first-steps-at-sap-ariba" class="hash-link" aria-label="Direct link to 🔧 First Steps at SAP Ariba" title="Direct link to 🔧 First Steps at SAP Ariba">​</a></h2>
-<p>Joining SAP Ariba as an Information Developer marked a crucial turning point. My role involved:</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-first-steps-at-infosysedgeverve">🔧 First Steps at Infosys/Edgeverve<a href="https://anandnr47.github.io/tech-writer-47-docs-as-code/blog/2024/07/01/first-post#-first-steps-at-infosysedgeverve" class="hash-link" aria-label="Direct link to 🔧 First Steps at Infosys/Edgeverve" title="Direct link to 🔧 First Steps at Infosys/Edgeverve">​</a></h2>
+<p>I joined Infosys right out of campus and worked on their cloud projects. In addition to coding, my work also involved contributing to FRD, BRD, or migration documents. I got an opportunity to move to the technical writing domain as part of internal job transfer. Joining Edgeverve as an Content Writer marked a crucial turning point. My role involved:</p>
 <ul>
 <li>Writing and updating API docs.</li>
-<li>Creating user-focused guides for procurement tools.</li>
+<li>Creating user-focused guides for Finacle.</li>
 <li>Collaborating closely with developers and UX designers.</li>
 </ul>
 <p>This wasn’t just documentation—it was about creating <strong>practical resources</strong> that help people work smarter.</p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="-embracing-docs-as-code">🧩 Embracing “Docs as Code”<a href="https://anandnr47.github.io/tech-writer-47-docs-as-code/blog/2024/07/01/first-post#-embracing-docs-as-code" class="hash-link" aria-label="Direct link to 🧩 Embracing “Docs as Code”" title="Direct link to 🧩 Embracing “Docs as Code”">​</a></h2>
-<p>As I refined my skills, I adopted a “Docs as Code” approach:</p>
+<p>As I refined my skills, I have started experimenting (in my personal time, of course) with “Docs as Code” approach:</p>
 <ul>
 <li>💾 <strong>Markdown + Git</strong> for version-controlled writing.</li>
 <li>⚙️ <strong>Docusaurus</strong> to build sleek, structured documentation sites.</li>
@@ -67,9 +56,9 @@ tags: [career, tech writing, journey]">​</a></h2>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="-what-im-focused-on-today">🚀 What I’m Focused On Today<a href="https://anandnr47.github.io/tech-writer-47-docs-as-code/blog/2024/07/01/first-post#-what-im-focused-on-today" class="hash-link" aria-label="Direct link to 🚀 What I’m Focused On Today" title="Direct link to 🚀 What I’m Focused On Today">​</a></h2>
 <ul>
-<li>Crafting clear API and CLI documentation.</li>
-<li>Designing tutorials, onboarding guides, and UX flows.</li>
-<li>Building docs ecosystems that scale with features.</li>
+<li>Crafting clear API and user-centric documentation.</li>
+<li>Creating tutorials, videos, and UX copy.</li>
+<li>Contributing to docs ecosystems that scale with features.</li>
 </ul>
 <p>And my goal stays constant: <strong>to make technology approachable and powerful for everyone</strong>.</p>
 <hr>
