@@ -21,6 +21,64 @@ title: First Post
 tags: [hello, docusaurus]" title="Direct link to slug: first-post
 title: First Post
 tags: [hello, docusaurus]">​</a></h2>
-<p>Welcome to the first blog post in your tech writer portfolio!</p>]]></content>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="slug-my-journey-to-tech-writingtitle-my-journey--from-engineer-to-tech-writerauthors-anandtags-career-tech-writing-journey">slug: my-journey-to-tech-writing
+title: My Journey — From Engineer to Tech Writer
+authors: [anand]
+tags: [career, tech writing, journey]<a href="https://anandnr47.github.io/tech-writer-47-docs-as-code/blog/2024/07/01/first-post#slug-my-journey-to-tech-writingtitle-my-journey--from-engineer-to-tech-writerauthors-anandtags-career-tech-writing-journey" class="hash-link" aria-label="Direct link to slug: my-journey-to-tech-writing
+title: My Journey — From Engineer to Tech Writer
+authors: [anand]
+tags: [career, tech writing, journey]" title="Direct link to slug: my-journey-to-tech-writing
+title: My Journey — From Engineer to Tech Writer
+authors: [anand]
+tags: [career, tech writing, journey]">​</a></h2>
+<h1>🛣️ From Engineer to Tech Writer: My Story</h1>
+<p>Ever since graduating from the <strong>Amrita School of Engineering</strong> and starting my career at <strong>SAP Ariba</strong>, I was fascinated by how complex systems could be broken down into clear, usable guides and thoughtful documentation. My path to tech writing wasn't planned—it grew naturally from a desire to <strong>bridge the gap between code and people</strong>.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-my-early-engineering-days">🎓 My Early Engineering Days<a href="https://anandnr47.github.io/tech-writer-47-docs-as-code/blog/2024/07/01/first-post#-my-early-engineering-days" class="hash-link" aria-label="Direct link to 🎓 My Early Engineering Days" title="Direct link to 🎓 My Early Engineering Days">​</a></h2>
+<p>At university, I thrived on solving technical problems. Between labs and assignments, I started writing technical posts for classmates—whether explaining networking concepts or breaking down programming assignments. That early experience taught me how to <strong>structure ideas for readability and clarity</strong>.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-first-steps-at-sap-ariba">🔧 First Steps at SAP Ariba<a href="https://anandnr47.github.io/tech-writer-47-docs-as-code/blog/2024/07/01/first-post#-first-steps-at-sap-ariba" class="hash-link" aria-label="Direct link to 🔧 First Steps at SAP Ariba" title="Direct link to 🔧 First Steps at SAP Ariba">​</a></h2>
+<p>Joining SAP Ariba as an Information Developer marked a crucial turning point. My role involved:</p>
+<ul>
+<li>Writing and updating API docs.</li>
+<li>Creating user-focused guides for procurement tools.</li>
+<li>Collaborating closely with developers and UX designers.</li>
+</ul>
+<p>This wasn’t just documentation—it was about creating <strong>practical resources</strong> that help people work smarter.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-embracing-docs-as-code">🧩 Embracing “Docs as Code”<a href="https://anandnr47.github.io/tech-writer-47-docs-as-code/blog/2024/07/01/first-post#-embracing-docs-as-code" class="hash-link" aria-label="Direct link to 🧩 Embracing “Docs as Code”" title="Direct link to 🧩 Embracing “Docs as Code”">​</a></h2>
+<p>As I refined my skills, I adopted a “Docs as Code” approach:</p>
+<ul>
+<li>💾 <strong>Markdown + Git</strong> for version-controlled writing.</li>
+<li>⚙️ <strong>Docusaurus</strong> to build sleek, structured documentation sites.</li>
+<li>🤖 <strong>CI/CD pipelines</strong> to automate review and deployment workflows.</li>
+</ul>
+<p>This integration of documentation into development workflows significantly increases consistency and maintains quality.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-why-i-chose-this-path">🌱 Why I Chose This Path<a href="https://anandnr47.github.io/tech-writer-47-docs-as-code/blog/2024/07/01/first-post#-why-i-chose-this-path" class="hash-link" aria-label="Direct link to 🌱 Why I Chose This Path" title="Direct link to 🌱 Why I Chose This Path">​</a></h2>
+<p>I love how tech writing:</p>
+<ol>
+<li>Unpacks tech into human-friendly language.</li>
+<li>Keeps evolving—every release is a new story to tell.</li>
+<li>Enhances developer experience and user satisfaction.</li>
+</ol>
+<p>Good docs aren’t just user-help—they’re a <strong>driver of adoption and delight</strong>.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-what-im-focused-on-today">🚀 What I’m Focused On Today<a href="https://anandnr47.github.io/tech-writer-47-docs-as-code/blog/2024/07/01/first-post#-what-im-focused-on-today" class="hash-link" aria-label="Direct link to 🚀 What I’m Focused On Today" title="Direct link to 🚀 What I’m Focused On Today">​</a></h2>
+<ul>
+<li>Crafting clear API and CLI documentation.</li>
+<li>Designing tutorials, onboarding guides, and UX flows.</li>
+<li>Building docs ecosystems that scale with features.</li>
+</ul>
+<p>And my goal stays constant: <strong>to make technology approachable and powerful for everyone</strong>.</p>
+<hr>
+<p>If you’re curious about building docs as code or discussing technical content, I’d love to connect!<br>
+<!-- -->Feel free to reach out on 🔗 <a href="https://www.linkedin.com/in/anand-athankavil/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+<hr>
+<blockquote>
+<p><em>“Treat documentation like code—to ensure it’s versioned, reviewed, and continuously improved.”</em></p>
+</blockquote>
+<p>Thanks for reading—here’s to the next chapter in clear, impactful communication!</p>]]></content>
     </entry>
 </feed>
