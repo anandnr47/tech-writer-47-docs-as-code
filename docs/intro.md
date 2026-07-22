@@ -48,4 +48,4 @@ The content covers three things recruiters usually care about:
 
 ---
 
-Have a look around, or [reach out on LinkedIn](https://linkedin.com/in/anandnr47) if you'd like to talk.
+Have a look around, or [reach out on LinkedIn](https://www.linkedin.com/in/anand-athankavil/) if you'd like to talk.
