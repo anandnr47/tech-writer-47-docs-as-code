@@ -14,7 +14,7 @@ module.exports = {
       items: [
         {
           to: '/intro',
-          label: 'Home',
+          label: 'About',
           position: 'left',
         },
         {

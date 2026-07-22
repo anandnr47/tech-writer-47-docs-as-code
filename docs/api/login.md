@@ -1,3 +1,9 @@
+---
+id: login
+title: Login
+sidebar_label: POST /auth/login
+---
+
 # POST /auth/login
 
 Authenticates a user with email and password credentials. Returns a short-lived access token and a refresh token.
