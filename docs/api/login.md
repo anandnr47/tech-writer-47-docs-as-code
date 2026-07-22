@@ -84,5 +84,5 @@ Authentication succeeded. Returns access and refresh tokens.
 ## Notes
 
 - Access tokens must be included in the `Authorization` header of all authenticated requests: `Authorization: Bearer <access_token>`
-- After an access token expires, use [POST /auth/refresh](/api/refresh) to get a new one without re-entering credentials.
+- After an access token expires, use your refresh token to call `POST /auth/refresh` and get a new access token without re-entering credentials.
 - After 5 consecutive failed attempts, the account is locked for 15 minutes.

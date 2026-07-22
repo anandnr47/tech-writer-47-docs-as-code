@@ -1,7 +1,6 @@
 ---
 id: intro
 title: About This Portfolio
-slug: /
 ---
 
 # About This Portfolio
