@@ -8,15 +8,16 @@ function Hero() {
   return (
     <header className={styles.heroBanner}>
       <div className="container">
-        <h1 className={styles.heroTitle}>Anand's Tech Writing Portfolio</h1>
+        <h1 className={styles.heroTitle}>Anand — Technical Writer</h1>
         <p className={styles.heroSubtitle}>
-          API docs · Developer guides · SaaS documentation · Docs-as-code
+          10 years across banking, semiconductors, SaaS, and enterprise software.
+          Specializing in API docs, doc architecture, and making complex things clear.
         </p>
         <div className={styles.heroButtons}>
           <Link className="button button--primary button--lg" to="/tutorials/getting-started">
-            Get Started
+            Read a Tutorial
           </Link>
-          <Link className="button button--secondary button--lg" to="/api/login">
+          <Link className="button button--secondary button--lg" to="/api/github-issues">
             API Reference
           </Link>
         </div>
@@ -38,12 +39,12 @@ function FeatureCard({ title, description, link }) {
 const features = [
   {
     title: 'API Reference',
-    description: 'Structured REST API documentation with request/response examples, status codes, and error handling.',
-    link: '/api/login',
+    description: 'Real REST API documentation using the GitHub Issues API — endpoints, parameters, request/response examples, and error codes.',
+    link: '/api/github-issues',
   },
   {
     title: 'Developer Tutorials',
-    description: 'Step-by-step guides that walk developers through authentication, integration, and common workflows.',
+    description: 'Step-by-step guides covering authentication, JWT internals, and getting started with an API.',
     link: '/tutorials/getting-started',
   },
   {
@@ -56,7 +57,7 @@ const features = [
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout title="Home" description="Technical writing portfolio — API docs, tutorials, and SaaS documentation samples">
+    <Layout title="Home" description="Technical writing portfolio — API docs, developer guides, and SaaS documentation samples">
       <Hero />
       <main>
         <section className={styles.featuresSection}>
