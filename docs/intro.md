@@ -28,14 +28,18 @@ Most of my career has been spent working on complex, high-stakes documentation: 
 
 The samples here are built on a docs-as-code stack (Docusaurus + GitHub Actions) to demonstrate that I'm comfortable working in a developer environment — not just in traditional CMS tools.
 
-The content covers three things recruiters usually care about:
-
-| Sample | What it shows |
-|---|---|
-| [GitHub Issues API](/api/github-issues) | REST API reference — real endpoints, real responses, written for developer audiences |
-| [How JWTs Work](/tutorials/how-jwts-work) | Concept documentation — explaining a technical mechanism clearly without oversimplifying |
-| [Getting Started](/tutorials/getting-started) | Developer onboarding — task-based, structured, with real curl examples |
-| [Release Notes](/release-notes) | Changelog writing — user-facing language that's informative without being noisy |
+| Sample | Type | What it shows |
+|---|---|---|
+| [GitHub Issues API](/api/github-issues) | API Reference | Real REST endpoints, request/response examples, error codes |
+| [POST /auth/login](/api/login) | API Reference | Authentication endpoint with full request/response/error docs |
+| [Users API](/api/users) | API Reference | CRUD API with filtering, pagination, and RBAC |
+| [Apache Avro API](/api/avro-api) | API Reference | Schema definition, serialization, and schema evolution |
+| [Getting Started](/tutorials/getting-started) | Onboarding | Developer onboarding — task-based, with real curl examples |
+| [Authentication Guide](/tutorials/authentication) | Tutorial | API key and OAuth 2.0 flows explained end-to-end |
+| [How JWTs Work](/tutorials/how-jwts-work) | Concept Guide | Explaining a technical mechanism clearly without oversimplifying |
+| [Getting Started with Sphinx](/tutorials/sphinx-getting-started) | Tutorial | Python doc tooling — install, configure, build, autodoc |
+| [Installing and Using htop](/tutorials/installing-htop) | Tutorial | CLI tool guide with keyboard shortcuts and interface reference |
+| [Release Notes](/release-notes) | Changelog | User-facing language that's informative without being noisy |
 
 ---
 
