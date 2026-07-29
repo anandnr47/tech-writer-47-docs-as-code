@@ -107,11 +107,6 @@
   gap: 1rem;
 }
 
-@media (max-width: 768px) {
-  .statsGrid { grid-template-columns: repeat(2, 1fr); }
-  .heroTitle { font-size: 2.2rem; }
-}
-
 .statItem {
   display: flex;
   flex-direction: column;
@@ -136,7 +131,7 @@
 /* Quote bar */
 .quoteBar {
   background: var(--ifm-color-emphasis-100);
-  padding: 2.5rem 0;
+  padding: 2.5rem 1rem;
   text-align: center;
   border-top: 1px solid var(--ifm-color-emphasis-200);
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
@@ -194,7 +189,7 @@
 
 /* Spotlight */
 .spotlight {
-  padding: 4rem 0;
+  padding: 4rem 1rem;
   background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
   color: #fff;
 }
@@ -307,7 +302,7 @@
 /* CTA strip */
 .ctaStrip {
   background: #1a1a2e;
-  padding: 4rem 0;
+  padding: 4rem 1rem;
   text-align: center;
   color: #fff;
 }
@@ -328,4 +323,58 @@
   font-size: 1rem;
   color: #a0aec0;
   margin-bottom: 2rem;
+}
+
+/* ── Mobile: tablet (≤ 768px) ── */
+@media (max-width: 768px) {
+  .heroBanner { padding: 3rem 1rem 2.5rem; }
+  .heroTitle { font-size: 2.2rem; }
+  .heroSubtitle { font-size: 1.05rem; }
+
+  .heroButtons {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 1rem;
+  }
+  .heroButtons a { text-align: center; }
+
+  .statsGrid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  .statValue { font-size: 1.6rem; }
+
+  .quote { font-size: 1.05rem; }
+
+  .bringGrid { grid-template-columns: 1fr; gap: 1rem; }
+  .bringCard { padding: 1.5rem 1rem; }
+
+  .spotlightTitle { font-size: 1.75rem; }
+  .spotlightDesc { font-size: 0.95rem; }
+
+  .featuresGrid { grid-template-columns: 1fr; }
+
+  .sectionTitle { font-size: 1.5rem; }
+
+  .ctaTitle { font-size: 1.5rem; }
+  .ctaDesc { font-size: 0.95rem; }
+}
+
+/* ── Mobile: phone (≤ 480px) ── */
+@media (max-width: 480px) {
+  .heroBanner { padding: 2.5rem 0.75rem 2rem; }
+  .heroTitle { font-size: 1.75rem; }
+  .heroSubtitle { font-size: 0.95rem; min-height: 1.8rem; }
+
+  .openBadge { font-size: 0.72rem; padding: 0.25rem 0.75rem; }
+
+  .industryPills { gap: 0.35rem; }
+  .industryPill { font-size: 0.7rem; padding: 0.2rem 0.55rem; }
+
+  .statsBar { padding: 1rem 0; }
+  .statValue { font-size: 1.4rem; }
+  .statLabel { font-size: 0.72rem; }
+
+  .spotlightTitle { font-size: 1.4rem; }
+
+  .ctaTitle { font-size: 1.25rem; }
+
+  .bringIcon { font-size: 2rem; }
 }
