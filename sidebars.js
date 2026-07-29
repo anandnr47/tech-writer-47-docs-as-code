@@ -36,6 +36,7 @@ module.exports = {
         'projects/projects-overview',
         'projects/ai-agents',
         'projects/analytics-framework',
+        'projects/ai-agent-doc-template',
       ],
     },
   ],
