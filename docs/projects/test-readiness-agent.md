@@ -7,99 +7,200 @@ title: Test Readiness Agent
 
 ## Overview
 
-The Test Readiness Agent automates the process of updating documentation test readiness status in response to requests from product managers. It reads a shared mailbox, identifies which documentation needs updating and what the target status should be, performs the update, and notifies the relevant writer — all without manual intervention.
+The Test Readiness Agent automates the process of updating documentation test readiness status in response to requests from product managers.
+
+**How it works:**
+1. A PM emails a writer asking to update the test readiness status of one or more documentation deliverables
+2. The writer forwards the email to a shared team mailbox
+3. The agent reads the mailbox, parses the email, identifies the target deliverables and requested status, and updates the documentation system
+4. The agent sends a notification to the writer confirming what changed — or flagging anything it couldn't resolve
 
 **Problem it solves:**
 
-In large documentation teams, product managers email individual writers to request test readiness status updates before each release cycle. With many writers, many products, and overlapping timelines, these requests create noise, get missed, or require writers to context-switch from active work to handle administrative updates.
-
-**Typical use cases:**
-- Updating test readiness status ahead of a product release
-- Batch status updates across multiple documentation deliverables
-- Audit trail for status changes across the team
-
-**Who uses it:** Documentation writers and their managers; product managers who initiate the requests.
+In large documentation teams, PMs email individual writers with status update requests before each release cycle. With many writers, many deliverables, and overlapping release timelines, these requests create noise, get missed, or require writers to context-switch from active work to perform administrative updates. The agent eliminates this entirely.
 
 ---
 
-## Before You Begin
+## Platform Support
 
-| Requirement | Details |
+| Feature | Local desktop mode | Headless / Graph API mode |
+|---|---|---|
+| Inline email (`--email`) | Yes | Yes |
+| Email from file (`--email-file`) | Yes | Yes |
+| Shared inbox (`--from-inbox`) | Yes — mail client must be open | Yes — works headlessly, no mail client needed |
+| Scheduled runs | No | Yes |
+| Mac support | No | Yes |
+| Additional setup | None | OAuth credentials in `.env` |
+
+The agent automatically selects the mode based on `.env` configuration:
+- **OAuth credentials present** → uses Graph API (headless, schedulable, cross-platform)
+- **OAuth credentials absent** → falls back to local mail client (Windows only, client must be open)
+
+---
+
+## Prerequisites
+
+- Python 3.12
+- Required packages: `anthropic`, `requests` (plus `pywin32` on Windows for local mail client mode)
+- VPN access to reach the documentation system API
+- An LLM proxy running locally (the agent sends emails to the LLM for parsing)
+- A shared team mailbox for receiving forwarded PM emails
+
+---
+
+## How to Run
+
+### Option 1 — Paste the email inline
+
+```bash
+python agent.py --cycle 2602 --email "Hi, please update J45 and 2TX to ready for testing for DE and US."
+```
+
+Best for quick one-off updates.
+
+### Option 2 — Read the email from a file
+
+Save the PM email as `email.txt` in the agent folder, then:
+
+```bash
+python agent.py --cycle 2602 --email-file email.txt
+```
+
+Recommended for long emails with many deliverables.
+
+### Option 3 — Read automatically from the shared mailbox
+
+```bash
+python agent.py --cycle 2602 --from-inbox
+```
+
+Requires OAuth credentials in `.env`. The agent prints confirmation of which mode it's using:
+- `[Inbox] Using Graph API (headless mode)`
+- `[Inbox] Using local mail client (desktop mode)`
+
+### Option 4 — Interactive prompt
+
+Omit `--cycle` and the agent prompts you:
+
+```
+python agent.py --email-file email.txt
+Enter release cycle (e.g. 2602): 2602
+```
+
+> The `--cycle` value maps to a specific release cycle field in the documentation system. Change this value for each new cycle.
+
+---
+
+## How Emails Are Filtered from the Inbox
+
+When running with `--from-inbox`, the agent applies two filters before processing:
+
+1. **Must be unread** — emails already marked as read are ignored
+2. **Must contain a known deliverable code** — the agent checks whether any known scope item codes appear in the subject or body (case-insensitive)
+
+| Email subject | Processed? | Reason |
+|---|---|---|
+| `FW: change J45 to ready for testing for DE` | Yes | Contains known code `J45` |
+| `Please update 2TX and J45 for DE and US` | Yes | Contains `J45` and `2TX` |
+| `please update j45 for de` | Yes | Case-insensitive match |
+| `Please update the documentation` | No | No deliverable code found |
+| `Re: meeting notes` | No | No deliverable code found |
+
+**Important:** If a deliverable code is not in the mapping file, emails about it are silently skipped. Always add new codes to the mapping file before forwarding PM emails.
+
+---
+
+## Deliverable Code Mapping
+
+The agent uses a `scope_items.json` file that maps the short codes PMs use in emails to the actual filenames in the documentation system.
+
+```json
+{
+  "J45": "obm1702805947428.ditamap",
+  "2TX": "dna1702805874201.ditamap"
+}
+```
+
+**Automatic discovery:** A discovery script traverses the documentation system and populates the mapping file automatically. Run it at the start of each release cycle to pick up new deliverables.
+
+```bash
+python discover_scope_items.py          # update the mapping file
+python discover_scope_items.py --dry-run  # preview without saving
+```
+
+**Manual addition:** If the script misses a deliverable, look up its filename in the documentation system and add it manually.
+
+If a code is not in the mapping, the agent reports it as unknown and skips it — it never guesses.
+
+---
+
+## Status Mapping
+
+The agent maps natural language from PM emails to exact status values in the documentation system. If the PM's wording cannot be confidently matched, the agent **does not guess** — it flags the request as ambiguous, skips the update, and logs the exact phrase so the writer can follow up with the PM.
+
+Example mappings:
+
+| PM says | Agent maps to |
 |---|---|
-| Shared mailbox | A team mailbox that PM emails are forwarded to |
-| Writer access | Each writer must be registered with their email and associated deliverables |
-| Permissions | Agent requires read access to the mailbox and write access to the documentation system |
-| PM instructions | PMs must include the deliverable name and target status in their email |
-
-Writers forward PM emails to the shared mailbox — no other setup is required on the writer side.
+| "ready for testing" | `ready for testing` |
+| "out of scope" | `out of scope` |
+| "structure complete" | `process structure complete` |
+| "fiori delayed" | `fiori development delayed` |
 
 ---
 
-## Capabilities
+## What the Agent Updates — and What It Leaves Alone
 
-| Capability | Description |
-|---|---|
-| Read | Reads incoming emails from the shared mailbox |
-| Parse | Extracts the target documentation and requested status from the email |
-| Identify | Matches the request to the correct documentation deliverable |
-| Update | Updates the test readiness status in the documentation system |
-| Notify | Sends a confirmation email to the relevant writer |
-| Escalate | Flags ambiguous or unresolvable requests and includes them in the notification |
+- **Updates:** Only the status field for the specified release cycle and the countries mentioned in the email
+- **Does not touch:** Any other fields, other release cycles, or countries not mentioned in the email
+- **All countries:** If no countries are specified, all countries in the deliverable are updated
+- **Skips:** Deliverables already at the target status (no unnecessary writes)
 
 ---
 
-## Limitations
+## Run Logs
 
-- **Email format dependency:** The agent parses natural language from PM emails. Highly ambiguous or incomplete emails may not be parsed correctly.
-- **One deliverable per email:** Emails requesting updates across many unrelated deliverables in a single message may result in partial processing.
-- **No real-time access:** The agent processes the mailbox on a scheduled interval, not instantly on receipt.
-- **Scope:** The agent updates test readiness status only. It does not modify content, publish documentation, or communicate directly with PMs.
-- **Manual review required for:** Any request flagged as ambiguous, any status that is not a recognised value in the documentation system.
+After each run, a summary is saved to a local `logs/` folder:
 
----
+```
+logs/run_20260601_143000.md
+```
 
-## How to Use the Agent
+Each log includes:
+- The original email
+- A table of what changed (deliverable, old status, new status)
+- Any warnings or skipped items
 
-### Goal: Update test readiness status for a documentation deliverable
-
-**Step 1 — Receive a PM request**
-
-A product manager sends you an email asking to update the test readiness status of a deliverable. Example:
-
-> *"Hi, can you update the test readiness status for the Supplier Onboarding Guide to Ready for Testing? We're targeting the release branch on Friday."*
-
-**Step 2 — Forward the email**
-
-Forward the email as-is to the shared team mailbox (e.g., `docs-status-updates@yourorg.com`). No additional text is needed.
-
-**Step 3 — Agent processes the request**
-
-The agent reads the mailbox, identifies:
-- Which deliverable is referenced
-- What the target status is
-
-It then updates the status in the documentation system.
-
-**Step 4 — You receive a notification**
-
-You receive a confirmation email with:
-- The deliverable that was updated
-- The old status and new status
-- A timestamp
-
-If the agent could not resolve the request, the notification includes the reason and what you need to clarify with your PM.
+> Logs are stored locally on the machine that ran the agent. A planned enhancement will send a summary email to the team after every run, so all writers are notified regardless of which machine processed the emails.
 
 ---
 
-## What the Agent Detects
+## APIs Used
 
-The agent parses the following from forwarded emails:
+### Documentation System REST API
 
-| Element | Examples |
-|---|---|
-| Deliverable name | "Supplier Onboarding Guide", "Invoice Processing Help" |
-| Target status | "Ready for Testing", "In Review", "Approved", "Not Started" |
-| Urgency signals | Dates, release references (used for prioritisation only) |
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `/login` | POST | Authenticate and obtain a session token |
+| `/topics/{filename}` | GET | Fetch deliverable XML content and version hash |
+| `/topics/{filename}` | PUT | Write updated XML back to the system |
+| `/document_lock` | POST | Lock document before editing (non-fatal if fails) |
+| `/document_unlock` | POST | Unlock document after editing |
+| `/documents` | GET | Fetch raw document XML (used by discovery script) |
+
+### Microsoft Graph API (headless inbox mode)
+
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `/users/{mailbox}/mailFolders/inbox/messages` | GET | Fetch unread emails from shared mailbox |
+| `/users/{mailbox}/messages/{id}` | PATCH | Mark email as read after processing |
+| `/users/{mailbox}/messages/{id}/move` | POST | Move processed email to archive folder |
+
+### LLM Proxy
+
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `localhost:{port}/v1/messages` | POST | Send email content to LLM for parsing and decision-making |
 
 ---
 
@@ -109,58 +210,46 @@ The agent parses the following from forwarded emails:
 |---|---|
 | Status update in documentation system | No — executed automatically |
 | Notification sent to writer | No — sent automatically |
-| Ambiguous request flagged | Yes — writer resolves with PM |
-| Unrecognised deliverable name | Yes — writer confirms correct deliverable |
-| Unrecognised status value | Yes — writer confirms valid status |
+| Ambiguous status request | Yes — writer follows up with PM |
+| Unrecognised deliverable code | Yes — writer adds code to mapping file |
+| Wrong deliverable updated | Yes — correct manually; improve PM email format |
 
-Review the confirmation notification for every update. If the agent updated the wrong deliverable or applied an incorrect status, correct it manually and note the discrepancy so the PM email format can be improved.
+Review the confirmation notification for every run. If the agent updated the wrong deliverable or applied an incorrect status, correct it manually in the documentation system.
 
 ---
 
 ## Troubleshooting
 
-| Issue | Likely cause | What to do |
+| Error | Cause | Fix |
 |---|---|---|
-| No confirmation email received | Email was not forwarded correctly, or agent hasn't processed the batch yet | Check the shared mailbox to confirm the forward arrived; allow time for the next processing cycle |
-| Wrong deliverable updated | Deliverable name in the PM email was ambiguous or matched multiple items | Correct the status manually; reply to the PM to clarify naming for future requests |
-| Status not recognised | PM used a non-standard status name | Correct manually; share the list of valid status values with your PM |
-| Flagged as ambiguous | Email lacked sufficient information | Follow up with the PM for clarification, then re-forward |
-| Multiple deliverables in one email | Agent may process partially | Forward as separate emails, one per deliverable |
+| `API key not set` | `.env` file missing or key not filled in | Check `.env` exists and has a valid key |
+| `401 Wrong username or password` | Documentation system credentials incorrect | Verify credentials in `.env` |
+| `Network error: offline` | LLM proxy not running or VPN disconnected | Start the LLM proxy and connect to VPN |
+| `Deliverable X not found in mapping` | Missing entry in `scope_items.json` | Add the filename for that deliverable and re-run |
+| `500 Internal Server Error` on update | XML or version hash mismatch | Re-run — the agent fetches a fresh hash each time |
+| Lock failed (non-fatal) | Known API limitation for the technical user | Safe to ignore — the update still applies |
+| `Could not connect to mail client` | Mail client is closed | Open the mail client, or configure Graph API credentials |
+| `Graph API 403 Access Denied` | Admin consent not yet granted | Raise an IT ticket to grant `Mail.Read` consent |
+| `Graph API token error` | Invalid OAuth credentials in `.env` | Verify `CLIENT_ID`, `TENANT_ID`, `CLIENT_SECRET` |
 
 ---
 
-## Privacy and Security
+## Known Limitations
 
-- **Data processed:** Email content (sender, subject, body) and documentation metadata (deliverable ID, current status)
-- **Data stored:** A log of status changes is retained for audit purposes
-- **Data shared:** No email content is shared externally; updates are made within the internal documentation system only
-- **Access control:** Only emails forwarded to the designated shared mailbox are processed; the agent does not have access to individual writer inboxes
-- **Compliance:** Status change logs are available to documentation managers for review
-
----
-
-## Example Notification Email
-
-```
-Subject: [Test Readiness Agent] Status updated — Supplier Onboarding Guide
-
-The following update was made:
-
-  Deliverable:   Supplier Onboarding Guide
-  Previous status: In Progress
-  New status:    Ready for Testing
-  Updated at:    2025-06-10 14:32 UTC
-
-No action required.
-
----
-If this update is incorrect, please correct it manually in the documentation system 
-and contact your PM to clarify the request format for future updates.
-```
+| Limitation | Detail |
+|---|---|
+| **Branch scope** | The agent updates the development branch only. Changes must be manually promoted to release branches via the documentation system UI. |
+| **Document locking** | Lock/unlock API calls may fail for the technical user. Updates still apply, but there is a small risk of conflict if two instances run simultaneously against the same deliverable. |
+| **One release cycle per run** | Each run targets one cycle. Re-run with a different `--cycle` value to update a different cycle. |
+| **VPN required** | The documentation system API is not reachable without VPN. |
+| **LLM proxy must be running** | The agent requires a locally running LLM proxy. |
+| **Mail client must be open (desktop mode only)** | When using local mail client fallback, the client must be open. Configure Graph API credentials to avoid this. |
+| **No scheduled polling yet** | The agent must be triggered manually. With Graph API configured, scheduled polling (e.g. via Windows Task Scheduler) is possible and planned. |
+| **Race condition with multiple machines** | If multiple team members run the agent simultaneously against the same shared mailbox, two machines may pick up the same email. The documentation system's hash-based optimistic locking prevents corrupt writes, but an update could be missed and would need re-running. **Recommended approach:** Run the agent on one designated machine. Writers forward emails and receive notifications — they don't need to run the agent themselves. |
 
 ---
 
 ## Related
 
 - [AI Writing Agents](/projects/ai-agents) — overview of all agents in the documentation toolset
-- [AI Agent Documentation Template](/projects/ai-agent-doc-template) — the template used to write this page
+- [AI Agent Documentation Template](/projects/ai-agent-doc-template) — the template used to structure this page
