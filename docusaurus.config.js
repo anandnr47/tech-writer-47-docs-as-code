@@ -4,7 +4,7 @@ module.exports = {
   baseUrl: '/tech-writer-47-docs-as-code/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
   organizationName: 'anandnr47',
   projectName: 'tech-writer-47-docs-as-code',
 

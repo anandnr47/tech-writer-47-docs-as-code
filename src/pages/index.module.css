@@ -5,7 +5,6 @@
   color: #fff;
 }
 
-/* Open to opportunities badge */
 .openBadge {
   display: inline-block;
   padding: 0.3rem 1rem;
@@ -17,6 +16,12 @@
   border: 1px solid rgba(99, 179, 237, 0.4);
   color: #90cdf4;
   margin-bottom: 1.25rem;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(99, 179, 237, 0.3); }
+  50% { box-shadow: 0 0 0 6px rgba(99, 179, 237, 0); }
 }
 
 .heroTitle {
@@ -28,10 +33,45 @@
 .heroSubtitle {
   font-size: 1.2rem;
   color: #a0aec0;
-  margin-bottom: 2rem;
-  max-width: 600px;
+  margin-bottom: 1.25rem;
+  max-width: 620px;
   margin-left: auto;
   margin-right: auto;
+  min-height: 2rem;
+}
+
+.typingText {
+  color: #63b3ed;
+  font-weight: 600;
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+  color: #63b3ed;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Industry pills */
+.industryPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.industryPill {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e2e8f0;
 }
 
 .heroButtons {
@@ -68,9 +108,8 @@
 }
 
 @media (max-width: 768px) {
-  .statsGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .heroTitle { font-size: 2.2rem; }
 }
 
 .statItem {
@@ -153,6 +192,47 @@
   color: var(--ifm-color-emphasis-700);
 }
 
+/* Spotlight */
+.spotlight {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
+  color: #fff;
+}
+
+.spotlightInner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.spotlightLabel {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(139, 92, 246, 0.25);
+  border: 1px solid rgba(139, 92, 246, 0.5);
+  color: #c4b5fd;
+  margin-bottom: 1rem;
+}
+
+.spotlightTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.spotlightDesc {
+  font-size: 1.05rem;
+  color: #a0aec0;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
 /* Writing samples */
 .featuresSection {
   padding: 4rem 0;
@@ -168,7 +248,7 @@
   padding: 2rem;
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 8px;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -176,12 +256,11 @@
 
 .featureCard:hover {
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  border-color: var(--accent, #3b82f6);
 }
 
-.featureCard h3 {
-  margin: 0;
-}
+.featureCard h3 { margin: 0; }
 
 .featureCard p {
   flex: 1;
@@ -208,7 +287,6 @@
   color: #90cdf4;
 }
 
-/* Domain tags */
 .tagList {
   display: flex;
   flex-wrap: wrap;
@@ -224,4 +302,30 @@
   font-weight: 500;
   background: var(--ifm-color-emphasis-200);
   color: var(--ifm-color-emphasis-700);
+}
+
+/* CTA strip */
+.ctaStrip {
+  background: #1a1a2e;
+  padding: 4rem 0;
+  text-align: center;
+  color: #fff;
+}
+
+.ctaInner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.ctaDesc {
+  font-size: 1rem;
+  color: #a0aec0;
+  margin-bottom: 2rem;
 }
