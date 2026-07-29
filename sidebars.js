@@ -41,7 +41,8 @@ module.exports = {
       ],
     },
   ],
-  approachSidebar: [
+  aboutSidebar: [
+    'intro',
     {
       type: 'category',
       label: 'My Approach',
