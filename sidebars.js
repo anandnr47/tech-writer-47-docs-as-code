@@ -41,4 +41,16 @@ module.exports = {
       ],
     },
   ],
+  approachSidebar: [
+    {
+      type: 'category',
+      label: 'My Approach',
+      collapsed: false,
+      items: [
+        'approach/how-i-work',
+        'approach/before-after',
+        'approach/information-architecture',
+      ],
+    },
+  ],
 };

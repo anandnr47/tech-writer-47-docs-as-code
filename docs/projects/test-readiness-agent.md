@@ -253,3 +253,15 @@ Review the confirmation notification for every run. If the agent updated the wro
 
 - [AI Writing Agents](/projects/ai-agents) — overview of all agents in the documentation toolset
 - [AI Agent Documentation Template](/projects/ai-agent-doc-template) — the template used to structure this page
+
+---
+
+## What I'd Do Differently
+
+**The email parser is fragile on unusual formats.** The agent handles most PM emails well, but very long emails with multiple unrelated topics in a single message sometimes result in partial processing. I'd add a pre-processing step that splits compound emails into separate requests before parsing.
+
+**Logs are local only.** Right now each machine stores its own run logs. If three people on the team could theoretically run the agent, you end up with logs spread across three machines. A centralised log — even just a shared folder or a summary emailed to the team — would make auditing much simpler. This is on the roadmap but not yet built.
+
+**There's no dry-run mode.** Before running against a real deliverable, it would be useful to see what the agent *would* do without actually doing it. A `--dry-run` flag that prints the planned updates without writing them would reduce the risk of incorrect updates and make it easier to onboard new users.
+
+**The scope items mapping requires manual maintenance.** The discovery script helps, but it still needs to be run manually at the start of each cycle. Ideally the agent would detect when it encounters an unknown code and prompt the user to run discovery rather than silently skipping the email.

@@ -186,6 +186,7 @@ const features = [
   { title: 'API Reference', badge: 'API Docs', description: 'REST API documentation with real endpoints, request/response examples, error codes, and schema definitions.', link: '/api/github-issues', linkLabel: 'Browse API docs →', tags: ['REST', 'OpenAPI', 'Authentication', 'Avro'], accentColor: '#3b82f6' },
   { title: 'Tutorials', badge: 'Tutorial', description: 'Step-by-step developer guides covering authentication, JWT internals, Sphinx, htop, and more.', link: '/tutorials/sphinx-getting-started', linkLabel: 'Browse tutorials →', tags: ['Developer Guides', 'Python', 'CLI', 'OAuth 2.0'], accentColor: '#10b981' },
   { title: 'Projects', badge: 'Project', description: 'AI writing agents and a documentation analytics framework built to improve quality and reduce manual work.', link: '/projects/projects-overview', linkLabel: 'View projects →', tags: ['AI Agents', 'Analytics', 'Automation', 'Docs Strategy'], accentColor: '#8b5cf6' },
+  { title: 'My Approach', badge: 'Process', description: "How I gather information, handle difficult SMEs, make IA decisions, and edit documentation that's already been written.", link: '/approach/how-i-work', linkLabel: 'Read more →', tags: ['Process', 'Editing', 'IA', 'Collaboration'], accentColor: '#ec4899' },
   { title: 'Release Notes', badge: 'Changelog', description: 'Versioned changelogs written for both technical and non-technical audiences.', link: '/release-notes', linkLabel: 'Read release notes →', tags: ['SaaS', 'Versioning', 'User-facing'], accentColor: '#f59e0b' },
 ];
 

@@ -36,6 +36,12 @@ module.exports = {
           sidebarId: 'projectsSidebar',
         },
         {
+          to: '/approach/how-i-work',
+          label: 'My Approach',
+          position: 'left',
+          sidebarId: 'approachSidebar',
+        },
+        {
           href: 'https://github.com/anandnr47/tech-writer-47-docs-as-code',
           label: 'GitHub',
           position: 'right',

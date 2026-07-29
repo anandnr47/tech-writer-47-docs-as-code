@@ -125,3 +125,17 @@ Self-service rate gets the highest weight because it's the most direct measure o
 Documentation teams often struggle to justify their work to stakeholders. Counting topics written or pages published doesn't tell you whether any of it is helping.
 
 When you can say "self-service rates went up 8 points after we rewrote the top 10 failing topics," that's a conversation product managers and support leads actually care about. It also makes prioritisation much easier. Instead of debating which page needs updating, you look at which pages have high traffic and low task completion and start there.
+
+---
+
+## What I'd Do Differently
+
+The framework works, but a few things I'd improve with more time:
+
+**The quality score formula needs validation.** The 60/30/10 weighting for self-service rate, task completion, and visits was based on judgment, not data. I'd want to run a regression against actual support ticket volume to check whether those weights hold up in practice. It's a reasonable starting point, but calling it validated would be a stretch.
+
+**The analysis loop assumes monthly cadence.** In practice, some product areas move faster than that. For high-traffic pages during a release cycle, weekly checks would surface problems before they compound. The framework should have a "fast lane" for critical content.
+
+**Open-text feedback is underused.** The framework tracks thumbs up/down ratios but treats open-text comments as supplementary. In my experience, those comments contain the most specific and actionable signal. I'd make qualitative analysis a formal step rather than an optional one.
+
+**There's no feedback loop to PMs.** The framework surfaces what documentation needs fixing, but doesn't close the loop back to product teams on whether the underlying feature caused the confusion in the first place. Some documentation problems are actually product problems in disguise.
