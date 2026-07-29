@@ -27,4 +27,16 @@ module.exports = {
     },
     'release-notes',
   ],
+  projectsSidebar: [
+    {
+      type: 'category',
+      label: 'Projects',
+      collapsed: false,
+      items: [
+        'projects/projects-overview',
+        'projects/ai-agents',
+        'projects/analytics-framework',
+      ],
+    },
+  ],
 };

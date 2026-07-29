@@ -115,6 +115,13 @@ const features = [
     linkLabel: 'Browse tutorials →',
   },
   {
+    title: 'Projects',
+    badge: 'Project',
+    description: 'AI writing agents and a documentation analytics framework built to improve documentation quality and reduce manual work.',
+    link: '/projects/projects-overview',
+    linkLabel: 'View projects →',
+  },
+  {
     title: 'Release Notes',
     badge: 'Changelog',
     description: 'Versioned changelogs written for both technical and non-technical audiences.',

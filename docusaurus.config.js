@@ -30,6 +30,12 @@ module.exports = {
           sidebarId: 'tutorialSidebar',
         },
         {
+          to: '/projects/projects-overview',
+          label: 'Projects',
+          position: 'left',
+          sidebarId: 'projectsSidebar',
+        },
+        {
           href: 'https://github.com/anandnr47/tech-writer-47-docs-as-code',
           label: 'GitHub',
           position: 'right',
