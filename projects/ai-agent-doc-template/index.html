@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">Documenting AI Agents — A Template | Tech Writer Portfolio</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://anandnr47.github.io/tech-writer-47-docs-as-code/projects/ai-agent-doc-template"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Documenting AI Agents — A Template | Tech Writer Portfolio"><meta data-rh="true" name="description" content="Writing documentation for AI agents is different from writing docs for a traditional feature. With a feature, you document what it does and how to use it. With an agent, you also need to tell users what to expect, what to verify, and when not to trust the output."><meta data-rh="true" property="og:description" content="Writing documentation for AI agents is different from writing docs for a traditional feature. With a feature, you document what it does and how to use it. With an agent, you also need to tell users what to expect, what to verify, and when not to trust the output."><link data-rh="true" rel="icon" href="/tech-writer-47-docs-as-code/img/favicon.svg"><link data-rh="true" rel="canonical" href="https://anandnr47.github.io/tech-writer-47-docs-as-code/projects/ai-agent-doc-template"><link data-rh="true" rel="alternate" href="https://anandnr47.github.io/tech-writer-47-docs-as-code/projects/ai-agent-doc-template" hreflang="en"><link data-rh="true" rel="alternate" href="https://anandnr47.github.io/tech-writer-47-docs-as-code/projects/ai-agent-doc-template" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Documenting AI Agents — A Template","item":"https://anandnr47.github.io/tech-writer-47-docs-as-code/projects/ai-agent-doc-template"}]}</script><link rel="stylesheet" href="/tech-writer-47-docs-as-code/assets/css/styles.4970613d.css">
-<script src="/tech-writer-47-docs-as-code/assets/js/runtime~main.11533222.js" defer="defer"></script>
+<script src="/tech-writer-47-docs-as-code/assets/js/runtime~main.77861a9f.js" defer="defer"></script>
 <script src="/tech-writer-47-docs-as-code/assets/js/main.34b2f8a3.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -45,37 +45,37 @@
 <p>Avoid vague capability names like &quot;Assist&quot; or &quot;Support&quot;. Name what the agent actually does.</p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-limitations">4. Limitations<a href="#4-limitations" class="hash-link" aria-label="Direct link to 4. Limitations" title="Direct link to 4. Limitations">​</a></h2>
-<p>This section matters more for AI than for any other type of software documentation. Users who don&#x27;t understand limitations will either over-trust the agent or lose confidence after a single unexpected result.</p>
+<p>This section is more important for AI features than for most other documentation. Users who don&#x27;t have a clear picture of what the agent can&#x27;t do will either over-rely on it or lose confidence the first time it gives an unexpected result.</p>
 <p>Document clearly:</p>
 <ul>
 <li><strong>Supported languages</strong> — which languages the agent can process and respond in</li>
 <li><strong>Data sources</strong> — what information the agent has access to</li>
-<li><strong>What it cannot access</strong> — real-time data, external systems, user files it hasn&#x27;t been given</li>
+<li><strong>What it cannot access</strong> — real-time data, external systems, files it hasn&#x27;t been given</li>
 <li><strong>Accuracy limitations</strong> — where the agent may be uncertain or approximate</li>
-<li><strong>Cases requiring human review</strong> — decisions that should not be accepted automatically</li>
+<li><strong>Cases requiring human review</strong> — decisions that shouldn&#x27;t be accepted automatically</li>
 </ul>
-<p>Don&#x27;t bury limitations at the end of a long page. Link to this section from the overview.</p>
+<p>Put this section early, not buried at the end. If there are critical limitations, link to them from the overview.</p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-how-to-use-the-agent">5. How to Use the Agent<a href="#5-how-to-use-the-agent" class="hash-link" aria-label="Direct link to 5. How to Use the Agent" title="Direct link to 5. How to Use the Agent">​</a></h2>
-<p>Document by <strong>user goal</strong>, not by UI screen. For each task, provide:</p>
+<p>Document by user goal, not by UI screen. For each task:</p>
 <ul>
 <li><strong>Goal</strong> — what the user is trying to accomplish</li>
 <li><strong>Example prompt</strong> — a realistic, well-formed input</li>
 <li><strong>Expected response</strong> — what the agent returns</li>
-<li><strong>Possible follow-up prompts</strong> — where the conversation can go next</li>
+<li><strong>Possible follow-ups</strong> — where the conversation typically goes next</li>
 </ul>
 <p><strong>Example:</strong></p>
 <p><strong>Goal:</strong> Create a sourcing event</p>
 <blockquote>
 <p><strong>Prompt:</strong> Create a sourcing event for 500 laptops for the EMEA region, delivery by Q3.</p>
-<p><strong>Agent response:</strong> Confirms the event details, requests any missing information (e.g., preferred suppliers, budget), creates the draft, and displays recommended next steps.</p>
+<p><strong>Agent response:</strong> Confirms the event details, asks for anything missing (preferred suppliers, budget), creates the draft, and shows recommended next steps.</p>
 <p><strong>Follow-up prompts:</strong></p>
 <ul>
 <li>&quot;Add Dell and Lenovo as preferred suppliers.&quot;</li>
 <li>&quot;What information is still missing from this event?&quot;</li>
 </ul>
 </blockquote>
-<p>Showing example prompts with expected responses sets realistic expectations and teaches users how to phrase requests effectively.</p>
+<p>Example prompts with expected responses set realistic expectations and show users how to phrase requests so they get useful results.</p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-conversation-best-practices">6. Conversation Best Practices<a href="#6-conversation-best-practices" class="hash-link" aria-label="Direct link to 6. Conversation Best Practices" title="Direct link to 6. Conversation Best Practices">​</a></h2>
 <p>Help users write prompts that get better results.</p>
@@ -93,14 +93,14 @@
 </ul>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="7-how-the-agent-works-high-level">7. How the Agent Works (High Level)<a href="#7-how-the-agent-works-high-level" class="hash-link" aria-label="Direct link to 7. How the Agent Works (High Level)" title="Direct link to 7. How the Agent Works (High Level)">​</a></h2>
-<p>Users don&#x27;t need implementation details, but they do need a mental model. Document:</p>
+<p>Users don&#x27;t need implementation details, but they do need a mental model of what the agent is working with. Cover:</p>
 <ul>
-<li>What information sources the agent draws from</li>
+<li>What information sources it draws from</li>
 <li>What business rules or policies it applies</li>
 <li>What external systems it can access</li>
-<li>What tools or actions it can invoke on behalf of the user</li>
+<li>What actions it can take on the user&#x27;s behalf</li>
 </ul>
-<p>Avoid technical architecture. Write this section for a user who is deciding whether to trust the agent&#x27;s output — not for an engineer debugging it.</p>
+<p>Keep this section non-technical. It&#x27;s for a user deciding whether to trust the output, not an engineer debugging it.</p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="8-human-review">8. Human Review<a href="#8-human-review" class="hash-link" aria-label="Direct link to 8. Human Review" title="Direct link to 8. Human Review">​</a></h2>
 <p>Be explicit about what requires human judgment. Classify actions into three categories:</p>
@@ -123,15 +123,10 @@
 </ul>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-this-template-exists">Why This Template Exists<a href="#why-this-template-exists" class="hash-link" aria-label="Direct link to Why This Template Exists" title="Direct link to Why This Template Exists">​</a></h2>
-<p>As AI features become standard in enterprise software, documentation teams need a consistent structure that works across implementations — not a new approach invented for each agent.</p>
-<p>This template was designed to be:</p>
-<ul>
-<li><strong>Reusable</strong> — drop it into any agent documentation project and adapt the content</li>
-<li><strong>User-centred</strong> — organized around goals, not features</li>
-<li><strong>Trust-building</strong> — limitations and human review sections set accurate expectations</li>
-<li><strong>Consistent</strong> — the same structure across agents reduces cognitive load for users who work with multiple agents in the same product</li>
-</ul>
+<p>As AI features become more common in enterprise software, documentation teams need a consistent structure that works across different agents. Without one, each team invents their own approach and users get a different experience every time.</p>
+<p>The sections in this template aren&#x27;t arbitrary. Capabilities and limitations go together because knowing what an agent can do is only half the picture. Human review exists because AI output shouldn&#x27;t be accepted blindly. Conversation best practices exist because most users don&#x27;t know how to prompt an agent well the first time.</p>
+<p>It&#x27;s designed to be adapted, not followed rigidly. Every agent is different.</p>
 <hr>
-<p><em>This template was developed as part of an AI documentation strategy for a large enterprise SaaS product. It is intended to be adapted, not followed rigidly — every agent has different capabilities, limitations, and user contexts.</em></p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/tech-writer-47-docs-as-code/projects/analytics-framework"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Documentation Analytics Framework</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/tech-writer-47-docs-as-code/projects/test-readiness-agent"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Test Readiness Agent</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-overview" class="table-of-contents__link toc-highlight">1. Overview</a></li><li><a href="#2-before-you-begin" class="table-of-contents__link toc-highlight">2. Before You Begin</a></li><li><a href="#3-capabilities" class="table-of-contents__link toc-highlight">3. Capabilities</a></li><li><a href="#4-limitations" class="table-of-contents__link toc-highlight">4. Limitations</a></li><li><a href="#5-how-to-use-the-agent" class="table-of-contents__link toc-highlight">5. How to Use the Agent</a></li><li><a href="#6-conversation-best-practices" class="table-of-contents__link toc-highlight">6. Conversation Best Practices</a></li><li><a href="#7-how-the-agent-works-high-level" class="table-of-contents__link toc-highlight">7. How the Agent Works (High Level)</a></li><li><a href="#8-human-review" class="table-of-contents__link toc-highlight">8. Human Review</a></li><li><a href="#9-troubleshooting" class="table-of-contents__link toc-highlight">9. Troubleshooting</a></li><li><a href="#10-privacy-and-security" class="table-of-contents__link toc-highlight">10. Privacy and Security</a></li><li><a href="#why-this-template-exists" class="table-of-contents__link toc-highlight">Why This Template Exists</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Portfolio</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/tech-writer-47-docs-as-code/api/github-issues">API Reference</a></li><li class="footer__item"><a class="footer__link-item" href="/tech-writer-47-docs-as-code/tutorials/getting-started">Tutorials</a></li><li class="footer__item"><a class="footer__link-item" href="/tech-writer-47-docs-as-code/projects/projects-overview">Projects</a></li><li class="footer__item"><a class="footer__link-item" href="/tech-writer-47-docs-as-code/release-notes">Release Notes</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Connect</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.linkedin.com/in/anand-athankavil/" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/anandnr47/tech-writer-47-docs-as-code" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Anand. Built with Docusaurus.</div></div></div></footer></div>
+<p><em>This template was developed as part of an AI documentation strategy for a large enterprise SaaS product.</em></p></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/tech-writer-47-docs-as-code/projects/analytics-framework"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Documentation Analytics Framework</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/tech-writer-47-docs-as-code/projects/test-readiness-agent"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Test Readiness Agent</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#1-overview" class="table-of-contents__link toc-highlight">1. Overview</a></li><li><a href="#2-before-you-begin" class="table-of-contents__link toc-highlight">2. Before You Begin</a></li><li><a href="#3-capabilities" class="table-of-contents__link toc-highlight">3. Capabilities</a></li><li><a href="#4-limitations" class="table-of-contents__link toc-highlight">4. Limitations</a></li><li><a href="#5-how-to-use-the-agent" class="table-of-contents__link toc-highlight">5. How to Use the Agent</a></li><li><a href="#6-conversation-best-practices" class="table-of-contents__link toc-highlight">6. Conversation Best Practices</a></li><li><a href="#7-how-the-agent-works-high-level" class="table-of-contents__link toc-highlight">7. How the Agent Works (High Level)</a></li><li><a href="#8-human-review" class="table-of-contents__link toc-highlight">8. Human Review</a></li><li><a href="#9-troubleshooting" class="table-of-contents__link toc-highlight">9. Troubleshooting</a></li><li><a href="#10-privacy-and-security" class="table-of-contents__link toc-highlight">10. Privacy and Security</a></li><li><a href="#why-this-template-exists" class="table-of-contents__link toc-highlight">Why This Template Exists</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Portfolio</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/tech-writer-47-docs-as-code/api/github-issues">API Reference</a></li><li class="footer__item"><a class="footer__link-item" href="/tech-writer-47-docs-as-code/tutorials/getting-started">Tutorials</a></li><li class="footer__item"><a class="footer__link-item" href="/tech-writer-47-docs-as-code/projects/projects-overview">Projects</a></li><li class="footer__item"><a class="footer__link-item" href="/tech-writer-47-docs-as-code/release-notes">Release Notes</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Connect</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.linkedin.com/in/anand-athankavil/" target="_blank" rel="noopener noreferrer" class="footer__link-item">LinkedIn<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://github.com/anandnr47/tech-writer-47-docs-as-code" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Anand. Built with Docusaurus.</div></div></div></footer></div>
 </body>
 </html>
