@@ -59,28 +59,28 @@ Avoid vague capability names like "Assist" or "Support". Name what the agent act
 
 ## 4. Limitations
 
-This section matters more for AI than for any other type of software documentation. Users who don't understand limitations will either over-trust the agent or lose confidence after a single unexpected result.
+This section is more important for AI features than for most other documentation. Users who don't have a clear picture of what the agent can't do will either over-rely on it or lose confidence the first time it gives an unexpected result.
 
 Document clearly:
 
 - **Supported languages** — which languages the agent can process and respond in
 - **Data sources** — what information the agent has access to
-- **What it cannot access** — real-time data, external systems, user files it hasn't been given
+- **What it cannot access** — real-time data, external systems, files it hasn't been given
 - **Accuracy limitations** — where the agent may be uncertain or approximate
-- **Cases requiring human review** — decisions that should not be accepted automatically
+- **Cases requiring human review** — decisions that shouldn't be accepted automatically
 
-Don't bury limitations at the end of a long page. Link to this section from the overview.
+Put this section early, not buried at the end. If there are critical limitations, link to them from the overview.
 
 ---
 
 ## 5. How to Use the Agent
 
-Document by **user goal**, not by UI screen. For each task, provide:
+Document by user goal, not by UI screen. For each task:
 
 - **Goal** — what the user is trying to accomplish
 - **Example prompt** — a realistic, well-formed input
 - **Expected response** — what the agent returns
-- **Possible follow-up prompts** — where the conversation can go next
+- **Possible follow-ups** — where the conversation typically goes next
 
 **Example:**
 
@@ -88,13 +88,13 @@ Document by **user goal**, not by UI screen. For each task, provide:
 
 > **Prompt:** Create a sourcing event for 500 laptops for the EMEA region, delivery by Q3.
 >
-> **Agent response:** Confirms the event details, requests any missing information (e.g., preferred suppliers, budget), creates the draft, and displays recommended next steps.
+> **Agent response:** Confirms the event details, asks for anything missing (preferred suppliers, budget), creates the draft, and shows recommended next steps.
 >
 > **Follow-up prompts:**
 > - "Add Dell and Lenovo as preferred suppliers."
 > - "What information is still missing from this event?"
 
-Showing example prompts with expected responses sets realistic expectations and teaches users how to phrase requests effectively.
+Example prompts with expected responses set realistic expectations and show users how to phrase requests so they get useful results.
 
 ---
 
@@ -116,14 +116,14 @@ Help users write prompts that get better results.
 
 ## 7. How the Agent Works (High Level)
 
-Users don't need implementation details, but they do need a mental model. Document:
+Users don't need implementation details, but they do need a mental model of what the agent is working with. Cover:
 
-- What information sources the agent draws from
+- What information sources it draws from
 - What business rules or policies it applies
 - What external systems it can access
-- What tools or actions it can invoke on behalf of the user
+- What actions it can take on the user's behalf
 
-Avoid technical architecture. Write this section for a user who is deciding whether to trust the agent's output — not for an engineer debugging it.
+Keep this section non-technical. It's for a user deciding whether to trust the output, not an engineer debugging it.
 
 ---
 
@@ -171,14 +171,12 @@ Cover:
 
 ## Why This Template Exists
 
-As AI features become standard in enterprise software, documentation teams need a consistent structure that works across implementations — not a new approach invented for each agent.
+As AI features become more common in enterprise software, documentation teams need a consistent structure that works across different agents. Without one, each team invents their own approach and users get a different experience every time.
 
-This template was designed to be:
-- **Reusable** — drop it into any agent documentation project and adapt the content
-- **User-centred** — organized around goals, not features
-- **Trust-building** — limitations and human review sections set accurate expectations
-- **Consistent** — the same structure across agents reduces cognitive load for users who work with multiple agents in the same product
+The sections in this template aren't arbitrary. Capabilities and limitations go together because knowing what an agent can do is only half the picture. Human review exists because AI output shouldn't be accepted blindly. Conversation best practices exist because most users don't know how to prompt an agent well the first time.
+
+It's designed to be adapted, not followed rigidly. Every agent is different.
 
 ---
 
-*This template was developed as part of an AI documentation strategy for a large enterprise SaaS product. It is intended to be adapted, not followed rigidly — every agent has different capabilities, limitations, and user contexts.*
+*This template was developed as part of an AI documentation strategy for a large enterprise SaaS product.*

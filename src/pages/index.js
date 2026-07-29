@@ -28,8 +28,8 @@ function TypingText() {
   }, [displayed, deleting, index]);
 
   return (
-    <span className={styles.typingText}>
-      {displayed}<span className={styles.cursor}>|</span>
+    <span className={styles.typingText} aria-live="polite" aria-atomic="true">
+      {displayed}<span className={styles.cursor} aria-hidden="true">|</span>
     </span>
   );
 }
@@ -38,15 +38,15 @@ function Hero() {
   return (
     <header className={styles.heroBanner}>
       <div className="container">
-        <div className={styles.openBadge}>✦ Open to new opportunities</div>
+        <div className={styles.openBadge} aria-label="Status: Open to new opportunities">✦ Open to new opportunities</div>
         <h1 className={styles.heroTitle}>Anand — Technical Writer</h1>
         <p className={styles.heroSubtitle}>
           10 years across banking, semiconductors, SaaS, and enterprise software. Specializing in{' '}
           <TypingText />
         </p>
-        <div className={styles.industryPills}>
+        <div className={styles.industryPills} role="list" aria-label="Industries">
           {['Banking', 'Semiconductors', 'SaaS', 'Enterprise Software', 'Procurement'].map((i) => (
-            <span key={i} className={styles.industryPill}>{i}</span>
+            <span key={i} className={styles.industryPill} role="listitem">{i}</span>
           ))}
         </div>
         <div className={styles.heroButtons}>
@@ -78,11 +78,11 @@ function StatsBar() {
   return (
     <div className={styles.statsBar}>
       <div className="container">
-        <div className={styles.statsGrid}>
+        <div className={styles.statsGrid} role="list" aria-label="Key stats">
           {stats.map((s) => (
-            <div key={s.label} className={styles.statItem}>
-              <span className={styles.statValue}>{s.value}</span>
-              <span className={styles.statLabel}>{s.label}</span>
+            <div key={s.label} className={styles.statItem} role="listitem" aria-label={`${s.value} ${s.label}`}>
+              <span className={styles.statValue} aria-hidden="true">{s.value}</span>
+              <span className={styles.statLabel} aria-hidden="true">{s.label}</span>
             </div>
           ))}
         </div>
@@ -123,9 +123,9 @@ function FadeIn({ children, delay = 0 }) {
 
 function WhatIBring() {
   const items = [
-    { icon: '🏗️', title: 'Doc Architecture', description: 'I figure out what needs to exist, how to structure it, and how users navigate it — before writing a single word.' },
-    { icon: '💡', title: 'Clarity', description: "Whether it's a REST API or a semiconductor subsystem, I make the underlying logic clear — not just the steps." },
-    { icon: '🛠️', title: 'Developer Tools', description: 'Git, Docusaurus, DITA, Oxygen XML, Ixiasoft CCMS. I work in the same environment as the engineers.' },
+    { icon: '🏗️', iconLabel: 'Building blocks', title: 'Doc Architecture', description: 'I figure out what needs to exist, how to structure it, and how users navigate it — before writing a single word.' },
+    { icon: '💡', iconLabel: 'Light bulb', title: 'Clarity', description: "Whether it's a REST API or a semiconductor subsystem, I make the underlying logic clear — not just the steps." },
+    { icon: '🛠️', iconLabel: 'Tools', title: 'Developer Tools', description: 'Git, Docusaurus, DITA, Oxygen XML, Ixiasoft CCMS. I work in the same environment as the engineers.' },
   ];
   return (
     <section className={styles.bringSection}>
@@ -135,7 +135,7 @@ function WhatIBring() {
           {items.map((item, i) => (
             <FadeIn key={item.title} delay={i * 120}>
               <div className={styles.bringCard}>
-                <div className={styles.bringIcon}>{item.icon}</div>
+                <div className={styles.bringIcon} aria-hidden="true">{item.icon}</div>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
               </div>

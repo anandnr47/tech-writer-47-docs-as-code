@@ -13,7 +13,7 @@ The Test Readiness Agent automates the process of updating documentation test re
 1. A PM emails a writer asking to update the test readiness status of one or more documentation deliverables
 2. The writer forwards the email to a shared team mailbox
 3. The agent reads the mailbox, parses the email, identifies the target deliverables and requested status, and updates the documentation system
-4. The agent sends a notification to the writer confirming what changed — or flagging anything it couldn't resolve
+4. The agent sends a notification to the writer confirming what changed, or flagging anything it couldn't resolve
 
 **Problem it solves:**
 
@@ -27,7 +27,7 @@ In large documentation teams, PMs email individual writers with status update re
 |---|---|---|
 | Inline email (`--email`) | Yes | Yes |
 | Email from file (`--email-file`) | Yes | Yes |
-| Shared inbox (`--from-inbox`) | Yes — mail client must be open | Yes — works headlessly, no mail client needed |
+| Shared inbox (`--from-inbox`) | Yes, mail client must be open | Yes, works headlessly, no mail client needed |
 | Scheduled runs | No | Yes |
 | Mac support | No | Yes |
 | Additional setup | None | OAuth credentials in `.env` |
@@ -130,13 +130,13 @@ python discover_scope_items.py --dry-run  # preview without saving
 
 **Manual addition:** If the script misses a deliverable, look up its filename in the documentation system and add it manually.
 
-If a code is not in the mapping, the agent reports it as unknown and skips it — it never guesses.
+If a code is not in the mapping, the agent reports it as unknown and skips it. It never guesses.
 
 ---
 
 ## Status Mapping
 
-The agent maps natural language from PM emails to exact status values in the documentation system. If the PM's wording cannot be confidently matched, the agent **does not guess** — it flags the request as ambiguous, skips the update, and logs the exact phrase so the writer can follow up with the PM.
+The agent maps natural language from PM emails to exact status values in the documentation system. If the PM's wording cannot be confidently matched, the agent **does not guess**. It flags the request as ambiguous, skips the update, and logs the exact phrase so the writer can follow up with the PM.
 
 Example mappings:
 
@@ -208,11 +208,11 @@ Each log includes:
 
 | Action | Review required? |
 |---|---|
-| Status update in documentation system | No — executed automatically |
-| Notification sent to writer | No — sent automatically |
-| Ambiguous status request | Yes — writer follows up with PM |
-| Unrecognised deliverable code | Yes — writer adds code to mapping file |
-| Wrong deliverable updated | Yes — correct manually; improve PM email format |
+| Status update in documentation system | No, executed automatically |
+| Notification sent to writer | No, sent automatically |
+| Ambiguous status request | Yes, writer follows up with PM |
+| Unrecognised deliverable code | Yes, writer adds code to mapping file |
+| Wrong deliverable updated | Yes, correct manually and improve PM email format |
 
 Review the confirmation notification for every run. If the agent updated the wrong deliverable or applied an incorrect status, correct it manually in the documentation system.
 

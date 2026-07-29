@@ -17,7 +17,7 @@ HEADER.PAYLOAD.SIGNATURE
 
 ## The Payload
 
-The payload holds claims — facts about the user or session.
+The payload holds claims, which are facts about the user or session.
 
 ```json
 {
@@ -61,11 +61,11 @@ When a server receives a token, it recomputes the signature. If it matches, the 
 
 ## Common Gotchas
 
-**Token expired** — client needs to re-authenticate or use a refresh token.
+**Token expired.** The client needs to re-authenticate or use a refresh token.
 
-**Can't revoke early** — JWTs are valid until `exp`. If you need instant revocation (e.g., after a password change), use short expiry times or maintain a blocklist.
+**Can't revoke early.** JWTs are valid until `exp`. If you need instant revocation (after a password change, for example), use short expiry times or maintain a blocklist.
 
-**`alg: none` vulnerability** — some old libraries accepted unsigned tokens. Always configure your library to require a specific algorithm.
+**`alg: none` vulnerability.** Some old libraries accepted unsigned tokens. Always configure your library to require a specific algorithm.
 
 ---
 
