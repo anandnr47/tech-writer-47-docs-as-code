@@ -5,6 +5,8 @@ module.exports = {
       label: 'API Reference',
       collapsed: false,
       items: [
+        'tutorials/getting-started',
+        'tutorials/authentication',
         'api/github-issues',
         'api/login',
         'api/users',
@@ -13,15 +15,6 @@ module.exports = {
     },
   ],
   tutorialSidebar: [
-    {
-      type: 'category',
-      label: 'Getting Started',
-      collapsed: false,
-      items: [
-        'tutorials/getting-started',
-        'tutorials/authentication',
-      ],
-    },
     {
       type: 'category',
       label: 'Tutorials',
