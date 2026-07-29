@@ -44,8 +44,31 @@ module.exports = {
     },
     footer: {
       style: 'dark',
-      links: [],
-      copyright: `Copyright © ${new Date().getFullYear()} Anand.`,
+      links: [
+        {
+          title: 'Portfolio',
+          items: [
+            { label: 'API Reference', to: '/api/github-issues' },
+            { label: 'Tutorials', to: '/tutorials/getting-started' },
+            { label: 'Projects', to: '/projects/projects-overview' },
+            { label: 'Release Notes', to: '/release-notes' },
+          ],
+        },
+        {
+          title: 'Connect',
+          items: [
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/anand-athankavil/',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/anandnr47/tech-writer-47-docs-as-code',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Anand. Built with Docusaurus.`,
     },
   },
 

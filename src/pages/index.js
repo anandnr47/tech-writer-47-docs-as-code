@@ -8,6 +8,7 @@ function Hero() {
   return (
     <header className={styles.heroBanner}>
       <div className="container">
+        <div className={styles.openBadge}>✦ Open to new opportunities</div>
         <h1 className={styles.heroTitle}>Anand — Technical Writer</h1>
         <p className={styles.heroSubtitle}>
           10 years across banking, semiconductors, SaaS, and enterprise software.
@@ -17,13 +18,13 @@ function Hero() {
           <Link className="button button--primary button--lg" to="/tutorials/getting-started">
             Explore API Docs
           </Link>
-          <Link className="button button--secondary button--lg" to="/tutorials/sphinx-getting-started">
+          <Link className={`button button--lg ${styles.btnOutline}`} to="/tutorials/sphinx-getting-started">
             Browse Tutorials
           </Link>
-          <Link className="button button--secondary button--lg" to="/projects/projects-overview">
+          <Link className={`button button--lg ${styles.btnOutline}`} to="/projects/projects-overview">
             View Projects
           </Link>
-          <Link className={`button button--lg ${styles.btnAbout}`} to="/intro">
+          <Link className={`button button--lg ${styles.btnOutline}`} to="/intro">
             About Me
           </Link>
         </div>
@@ -55,6 +56,18 @@ function StatsBar() {
   );
 }
 
+function QuoteBar() {
+  return (
+    <div className={styles.quoteBar}>
+      <div className="container">
+        <blockquote className={styles.quote}>
+          "Good documentation doesn't just explain what a product does — it makes users confident enough to act."
+        </blockquote>
+      </div>
+    </div>
+  );
+}
+
 function WhatIBring() {
   const items = [
     {
@@ -70,7 +83,7 @@ function WhatIBring() {
     {
       icon: '🛠️',
       title: 'Developer Tools',
-      description: 'DITA, Oxygen XML, Ixiasoft CCMS, Git, Docusaurus. I work in the same environment as the engineers.',
+      description: 'Git, Docusaurus, DITA, Oxygen XML, Ixiasoft CCMS. I work in the same environment as the engineers.',
     },
   ];
   return (
@@ -91,12 +104,15 @@ function WhatIBring() {
   );
 }
 
-function FeatureCard({ title, description, link, linkLabel, badge }) {
+function FeatureCard({ title, description, link, linkLabel, badge, tags }) {
   return (
     <div className={styles.featureCard}>
       <span className={styles.badge}>{badge}</span>
       <h3>{title}</h3>
       <p>{description}</p>
+      <div className={styles.tagList}>
+        {tags.map((t) => <span key={t} className={styles.tag}>{t}</span>)}
+      </div>
       <Link to={link}>{linkLabel}</Link>
     </div>
   );
@@ -109,6 +125,7 @@ const features = [
     description: 'REST API documentation with real endpoints, request/response examples, error codes, and schema definitions.',
     link: '/api/github-issues',
     linkLabel: 'Browse API docs →',
+    tags: ['REST', 'OpenAPI', 'Authentication', 'Avro'],
   },
   {
     title: 'Tutorials',
@@ -116,6 +133,7 @@ const features = [
     description: 'Step-by-step developer guides covering authentication, JWT internals, Sphinx, htop, and more.',
     link: '/tutorials/sphinx-getting-started',
     linkLabel: 'Browse tutorials →',
+    tags: ['Developer Guides', 'Python', 'CLI', 'OAuth 2.0'],
   },
   {
     title: 'Projects',
@@ -123,6 +141,7 @@ const features = [
     description: 'AI writing agents and a documentation analytics framework built to improve documentation quality and reduce manual work.',
     link: '/projects/projects-overview',
     linkLabel: 'View projects →',
+    tags: ['AI Agents', 'Analytics', 'Automation', 'Docs Strategy'],
   },
   {
     title: 'Release Notes',
@@ -130,6 +149,7 @@ const features = [
     description: 'Versioned changelogs written for both technical and non-technical audiences.',
     link: '/release-notes',
     linkLabel: 'Read release notes →',
+    tags: ['SaaS', 'Versioning', 'User-facing'],
   },
 ];
 
@@ -139,6 +159,7 @@ export default function Home() {
     <Layout title="Home" description="Technical writing portfolio — API docs, developer guides, and SaaS documentation samples">
       <Hero />
       <StatsBar />
+      <QuoteBar />
       <WhatIBring />
       <main>
         <section className={styles.featuresSection}>
