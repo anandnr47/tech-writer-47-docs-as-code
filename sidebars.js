@@ -35,6 +35,7 @@ module.exports = {
       items: [
         'projects/projects-overview',
         'projects/ai-agents',
+        'projects/test-readiness-agent',
         'projects/analytics-framework',
         'projects/ai-agent-doc-template',
       ],

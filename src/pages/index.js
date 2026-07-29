@@ -154,11 +154,11 @@ function Spotlight() {
         <FadeIn>
           <div className={styles.spotlightInner}>
             <div className={styles.spotlightLabel}>Featured Sample</div>
-            <h2 className={styles.spotlightTitle}>AI Writing Agents</h2>
+            <h2 className={styles.spotlightTitle}>Test Readiness Agent</h2>
             <p className={styles.spotlightDesc}>
-              Built a suite of AI agents that generate first drafts from Jira, wiki, and meeting transcripts — including automatic diagram generation, accessibility checks, terminology validation, and automated test readiness updates.
+              An AI agent that reads a shared mailbox, parses product manager requests, updates documentation test readiness status automatically, and notifies writers — eliminating a high-volume manual workflow across a large documentation team.
             </p>
-            <Link className="button button--primary button--lg" to="/projects/ai-agents">
+            <Link className="button button--primary button--lg" to="/projects/test-readiness-agent">
               Read the case study →
             </Link>
           </div>
