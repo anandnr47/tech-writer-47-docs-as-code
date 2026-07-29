@@ -59,6 +59,9 @@ function Hero() {
           <Link className={`button button--lg ${styles.btnOutline}`} to="/projects/projects-overview">
             View Projects
           </Link>
+          <Link className={`button button--lg ${styles.btnOutline}`} to="/approach/how-i-work">
+            My Approach
+          </Link>
           <Link className={`button button--lg ${styles.btnOutline}`} to="/intro">
             About Me
           </Link>
