@@ -20,7 +20,7 @@ function Hero() {
           <Link className="button button--secondary button--lg" to="/tutorials/sphinx-getting-started">
             Browse Tutorials
           </Link>
-          <Link className="button button--outline button--secondary button--lg" to="/intro">
+          <Link className={`button button--lg ${styles.btnAbout}`} to="/intro">
             About Me
           </Link>
         </div>
@@ -34,7 +34,7 @@ function StatsBar() {
     { value: '10+', label: 'Years Experience' },
     { value: '5', label: 'Industries' },
     { value: '10', label: 'Writing Samples' },
-    { value: 'DITA', label: 'Structured Authoring' },
+    { value: 'AI', label: 'Docs Automation' },
   ];
   return (
     <div className={styles.statsBar}>
