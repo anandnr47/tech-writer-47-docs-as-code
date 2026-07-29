@@ -20,6 +20,9 @@ function Hero() {
           <Link className="button button--secondary button--lg" to="/tutorials/sphinx-getting-started">
             Browse Tutorials
           </Link>
+          <Link className="button button--secondary button--lg" to="/projects/projects-overview">
+            View Projects
+          </Link>
           <Link className={`button button--lg ${styles.btnAbout}`} to="/intro">
             About Me
           </Link>
