@@ -5,15 +5,9 @@ title: Documentation Analytics Framework
 
 # Documentation Analytics Framework
 
-A standardized framework for measuring whether documentation actually works — and a systematic process for improving it based on data, not guesswork.
+Most documentation teams publish content and move on. Whether it actually helped users is anyone's guess — until a support ticket arrives, or a user complains, or someone notices a page hasn't been updated in two years.
 
----
-
-## The Problem
-
-Most documentation teams don't know if their content helps users. Pages get written, published, and left alone. When something is wrong, the signal arrives late — as a support ticket, a complaint, or a user giving up.
-
-This framework closes that loop. It connects user behavior data to content decisions, so improvements are targeted, measurable, and repeatable.
+I built this framework to close that gap. The idea is straightforward: connect user behavior data to content decisions, measure what's working, and prioritise fixes based on impact rather than instinct.
 
 ---
 
@@ -135,6 +129,6 @@ Self-service rate carries the highest weight (60%) because it's the most direct 
 
 ## Why This Matters
 
-Documentation is often treated as a cost center. This framework turns it into something measurable: a function that either reduces support load and improves user outcomes, or doesn't — and now you can tell the difference.
+Documentation teams often struggle to justify their work to stakeholders. Output metrics — topics written, pages published — don't tell you whether the documentation is doing its job.
 
-It also gives documentation teams a language that resonates with product and business stakeholders: not "we wrote 40 topics this quarter" but "self-service rates improved by 8 points after we rewrote the top 10 failing topics."
+This framework gives you a different kind of number. When you can say "self-service rates went up 8 points after we rewrote the top 10 failing topics", that's a conversation product managers and support leads actually care about. It also makes prioritisation easier — instead of debating which page needs updating, you look at which pages have high traffic and low task completion and start there.

@@ -5,15 +5,13 @@ title: AI Writing Agents
 
 # AI Writing Agents
 
-A suite of AI agents built to reduce manual work in a large-scale enterprise documentation environment. Each agent handles a specific part of the documentation workflow — from first draft to quality audit to operational maintenance.
+Over the past couple of years I've built a set of AI agents to handle the repetitive parts of documentation work — the tasks that don't require judgment but eat up time anyway. Each one came out of a real pain point on my team.
 
 ---
 
-## The Problem
+## Why I Built These
 
-Enterprise documentation teams deal with high volume and constant change. Writers spend significant time on repetitive tasks: creating first drafts from scattered inputs, checking terminology consistency, auditing content quality, and responding to status update requests from product managers.
-
-These tasks are time-consuming, error-prone when done manually, and take time away from higher-value work like information architecture and content strategy.
+Writers in large documentation teams spend a surprising amount of time on things that aren't writing: chasing down information across Jira, wikis, and meeting notes; manually checking terminology; responding to status update requests from PMs. I wanted to automate the parts that follow a predictable pattern so the team could focus on work that actually requires a human.
 
 ---
 
@@ -33,7 +31,7 @@ Generates first-draft documentation from multiple inputs simultaneously.
 - Identifies gaps where information is missing or contradictory across sources
 - Extracts process flows from meeting transcripts and auto-generates diagrams where applicable
 
-**Impact:** Cuts first-draft time significantly, letting writers focus on review and refinement rather than starting from blank pages.
+**Impact:** First drafts used to mean starting from scratch after reading three sources that didn't fully agree. Now writers start from a draft that's already synthesised the inputs — and their job is to fix what the agent got wrong, not to assemble raw material.
 
 ---
 
@@ -61,13 +59,13 @@ Monitors documentation for term inconsistencies against an approved glossary.
 - Flags unapproved synonyms, deprecated terms, and inconsistent capitalization
 - Suggests the approved term for each flag
 
-**Why it matters:** In enterprise software documentation, inconsistent terminology confuses users and creates support tickets. This agent catches drift before it ships.
+**Why it matters:** Inconsistent terminology is one of the most common causes of support tickets in enterprise software docs. Users search for "purchase order" and the docs say "PO" — or worse, both. This agent catches that before it ships.
 
 ---
 
 ### Content Audit Agent
 
-Audits documentation sets for quality issues at scale — something that would take weeks to do manually.
+Running a quality audit across a large documentation set manually takes weeks and still misses things. This agent does it in minutes.
 
 **What it checks:**
 - Outdated product version references
@@ -96,7 +94,7 @@ Product managers email writers individually asking them to update the test readi
 4. It sends a notification to the relevant writer confirming the update
 5. If it encounters an ambiguity or error it cannot resolve, it flags it in the notification so the writer can follow up with their PM directly
 
-**Impact:** Eliminates manual status updates, reduces missed requests, and gives writers a clear log of what changed and why.
+**Impact:** The test readiness agent removed a whole category of interruption from the team's day. Writers forward the email and get back a notification — they don't have to touch the documentation system at all.
 
 ---
 
@@ -106,8 +104,6 @@ Built using Claude (Anthropic), with integrations into Jira, Confluence, and int
 
 ---
 
-## What This Work Shows
+## A note on how these were built
 
-These agents weren't built by an engineering team — they were designed and implemented by a technical writer who identified workflow bottlenecks, understood the inputs and outputs well enough to specify the logic, and had the technical range to build and test them.
-
-It's the intersection of documentation expertise and AI tooling that makes them useful rather than generic.
+I'm a technical writer, not a software engineer. These agents were built because I understood the workflows well enough to specify the logic precisely — the inputs, the decision rules, the edge cases, the failure modes. That domain knowledge is what made them useful rather than generic. The engineering was learnable. Knowing exactly what the agent needed to do was the harder part.

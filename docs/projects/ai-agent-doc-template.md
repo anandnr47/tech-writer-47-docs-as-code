@@ -5,15 +5,9 @@ title: Documenting AI Agents — A Template
 
 # Documenting AI Agents — A Reusable Template
 
-Documenting AI agents requires a different mindset than documenting traditional software.
+Writing documentation for AI agents is different from writing docs for a traditional feature. With a feature, you document what it does and how to use it. With an agent, you also need to tell users what to expect, what to verify, and when not to trust the output.
 
-Traditional documentation answers: *"Which buttons do I click?"*
-
-Agent documentation answers: *"What goal am I trying to achieve, what should I ask, what should I expect, and what should I verify before accepting the output?"*
-
-An agent is goal-driven, may invoke multiple tools, reasons through tasks, and its behavior can vary based on context. Users need to understand not just what the agent does — but how to work with it effectively.
-
-This template is designed to be reused across agent implementations. It ensures consistency, reduces the risk of gaps, and helps users build accurate mental models of what an agent can and cannot do.
+I developed this template after working on AI agent documentation for an enterprise product. The goal was a structure that could be reused across different agents without having to reinvent the approach each time.
 
 ---
 
