@@ -3,11 +3,11 @@ id: ai-agent-doc-template
 title: Documenting AI Agents — A Template
 ---
 
-# Documenting AI Agents — A Reusable Template
+# Documenting AI Agents: A Reusable Template
 
 Writing documentation for AI agents is different from writing docs for a traditional feature. With a feature, you document what it does and how to use it. With an agent, you also need to tell users what to expect, what to verify, and when not to trust the output.
 
-I developed this template after working on AI agent documentation for an enterprise product. The goal was a structure that could be reused across different agents without having to reinvent the approach each time.
+I developed this template after working on AI agent documentation for an enterprise product. The goal was a structure that could be reused across different agents without reinventing the approach each time.
 
 ---
 
