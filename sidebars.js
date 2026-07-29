@@ -1,14 +1,5 @@
 module.exports = {
-  tutorialSidebar: [
-    {
-      type: 'category',
-      label: 'Getting Started',
-      collapsed: false,
-      items: [
-        'tutorials/getting-started',
-        'tutorials/authentication',
-      ],
-    },
+  apiSidebar: [
     {
       type: 'category',
       label: 'API Reference',
@@ -18,6 +9,17 @@ module.exports = {
         'api/login',
         'api/users',
         'api/avro-api',
+      ],
+    },
+  ],
+  tutorialSidebar: [
+    {
+      type: 'category',
+      label: 'Getting Started',
+      collapsed: false,
+      items: [
+        'tutorials/getting-started',
+        'tutorials/authentication',
       ],
     },
     {

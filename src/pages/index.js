@@ -26,12 +26,12 @@ function Hero() {
   );
 }
 
-function FeatureCard({ title, description, link }) {
+function FeatureCard({ title, description, link, linkLabel }) {
   return (
     <div className={styles.featureCard}>
       <h3>{title}</h3>
       <p>{description}</p>
-      <Link to={link}>Read more →</Link>
+      <Link to={link}>{linkLabel}</Link>
     </div>
   );
 }
@@ -39,18 +39,21 @@ function FeatureCard({ title, description, link }) {
 const features = [
   {
     title: 'API Reference',
-    description: 'Real REST API documentation using the GitHub Issues API — endpoints, parameters, request/response examples, and error codes.',
+    description: 'REST API documentation with real endpoints, request/response examples, error codes, and schema definitions.',
     link: '/api/github-issues',
+    linkLabel: 'Browse API docs →',
   },
   {
-    title: 'Developer Tutorials',
-    description: 'Step-by-step guides covering authentication, JWT internals, and getting started with an API.',
+    title: 'Tutorials',
+    description: 'Step-by-step developer guides covering authentication, JWT internals, Sphinx, htop, and more.',
     link: '/tutorials/getting-started',
+    linkLabel: 'Browse tutorials →',
   },
   {
     title: 'Release Notes',
     description: 'Versioned changelogs written for both technical and non-technical audiences.',
     link: '/release-notes',
+    linkLabel: 'Read release notes →',
   },
 ];
 

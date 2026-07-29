@@ -18,6 +18,18 @@ module.exports = {
           position: 'left',
         },
         {
+          to: '/api/github-issues',
+          label: 'API Reference',
+          position: 'left',
+          sidebarId: 'apiSidebar',
+        },
+        {
+          to: '/tutorials/getting-started',
+          label: 'Tutorials',
+          position: 'left',
+          sidebarId: 'tutorialSidebar',
+        },
+        {
           href: 'https://github.com/anandnr47/tech-writer-47-docs-as-code',
           label: 'GitHub',
           position: 'right',
