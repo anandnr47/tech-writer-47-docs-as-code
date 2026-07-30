@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">Build a Documentation Site with Docusaurus and GitHub Pages | Tech Writer Portfolio</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://anandnr47.github.io/tech-writer-47-docs-as-code/tutorials/build-a-docs-site"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Build a Documentation Site with Docusaurus and GitHub Pages | Tech Writer Portfolio"><meta data-rh="true" name="description" content="This guide walks you through building and publishing a documentation site using Docusaurus and GitHub Pages. By the end, you&#x27;ll have a live site at a public URL that updates automatically every time you push a change."><meta data-rh="true" property="og:description" content="This guide walks you through building and publishing a documentation site using Docusaurus and GitHub Pages. By the end, you&#x27;ll have a live site at a public URL that updates automatically every time you push a change."><link data-rh="true" rel="icon" href="/tech-writer-47-docs-as-code/img/favicon.svg"><link data-rh="true" rel="canonical" href="https://anandnr47.github.io/tech-writer-47-docs-as-code/tutorials/build-a-docs-site"><link data-rh="true" rel="alternate" href="https://anandnr47.github.io/tech-writer-47-docs-as-code/tutorials/build-a-docs-site" hreflang="en"><link data-rh="true" rel="alternate" href="https://anandnr47.github.io/tech-writer-47-docs-as-code/tutorials/build-a-docs-site" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Build a Documentation Site with Docusaurus and GitHub Pages","item":"https://anandnr47.github.io/tech-writer-47-docs-as-code/tutorials/build-a-docs-site"}]}</script><link rel="stylesheet" href="/tech-writer-47-docs-as-code/assets/css/styles.4970613d.css">
-<script src="/tech-writer-47-docs-as-code/assets/js/runtime~main.0b2f72f4.js" defer="defer"></script>
+<script src="/tech-writer-47-docs-as-code/assets/js/runtime~main.8b1bf834.js" defer="defer"></script>
 <script src="/tech-writer-47-docs-as-code/assets/js/main.b9837d73.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -108,14 +108,25 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-updates-work">How Updates Work<a href="#how-updates-work" class="hash-link" aria-label="Direct link to How Updates Work" title="Direct link to How Updates Work">​</a></h2>
 <p>From this point on you have two options for editing content.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="option-a-edit-directly-on-githubcom-simpler">Option A: Edit directly on GitHub.com (simpler)<a href="#option-a-edit-directly-on-githubcom-simpler" class="hash-link" aria-label="Direct link to Option A: Edit directly on GitHub.com (simpler)" title="Direct link to Option A: Edit directly on GitHub.com (simpler)">​</a></h3>
+<p>You can both edit existing files and create new ones directly on GitHub.com — no terminal needed.</p>
+<p><strong>To edit an existing file:</strong></p>
 <ol>
 <li>Go to your repo on GitHub.com</li>
-<li>Navigate to any file in <code>docs/</code></li>
+<li>Navigate to the file in <code>docs/</code></li>
 <li>Click the pencil icon to edit</li>
 <li>Make your changes and click <strong>Commit changes</strong></li>
-<li>GitHub Actions runs automatically and your site updates in 2–3 minutes</li>
 </ol>
-<p>No terminal needed. Good for editing existing pages or adding new Markdown files.</p>
+<p><strong>To create a new file:</strong></p>
+<ol>
+<li>Navigate to the folder where you want the file (e.g. <code>docs/tutorials/</code>)</li>
+<li>Click <strong>Add file → Create new file</strong></li>
+<li>Type the filename (e.g. <code>my-new-page.md</code>)</li>
+<li>Write your content and click <strong>Commit changes</strong></li>
+</ol>
+<blockquote>
+<p>You can also create new folders this way. Type a path like <code>docs/new-folder/my-page.md</code> and GitHub will create the folder automatically.</p>
+</blockquote>
+<p>GitHub Actions runs after every commit and your site updates in 2–3 minutes.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="option-b-work-locally-recommended-for-larger-changes">Option B: Work locally (recommended for larger changes)<a href="#option-b-work-locally-recommended-for-larger-changes" class="hash-link" aria-label="Direct link to Option B: Work locally (recommended for larger changes)" title="Direct link to Option B: Work locally (recommended for larger changes)">​</a></h3>
 <p>Clone the repo to your machine first:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#bfc7d5"><span class="token plain">git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">cd YOUR-REPO-NAME</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">npm install</span><br></span><span class="token-line" style="color:#bfc7d5"><span class="token plain">npm start</span><br></span></code></pre></div></div>
