@@ -267,13 +267,23 @@ From this point on you have two options for editing content.
 
 ### Option A: Edit directly on GitHub.com (simpler)
 
+You can both edit existing files and create new ones directly on GitHub.com — no terminal needed.
+
+**To edit an existing file:**
 1. Go to your repo on GitHub.com
-2. Navigate to any file in `docs/`
+2. Navigate to the file in `docs/`
 3. Click the pencil icon to edit
 4. Make your changes and click **Commit changes**
-5. GitHub Actions runs automatically and your site updates in 2–3 minutes
 
-No terminal needed. Good for editing existing pages or adding new Markdown files.
+**To create a new file:**
+1. Navigate to the folder where you want the file (e.g. `docs/tutorials/`)
+2. Click **Add file → Create new file**
+3. Type the filename (e.g. `my-new-page.md`)
+4. Write your content and click **Commit changes**
+
+> You can also create new folders this way. Type a path like `docs/new-folder/my-page.md` and GitHub will create the folder automatically.
+
+GitHub Actions runs after every commit and your site updates in 2–3 minutes.
 
 ### Option B: Work locally (recommended for larger changes)
 
