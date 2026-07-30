@@ -35,9 +35,9 @@ List what users need before they can interact with the agent:
 - Required permissions or roles
 - Supported systems and integrations
 - Configuration prerequisites
-- Any data the agent needs access to in order to function
+- Any data the agent needs access to before it can function
 
-This section prevents the most common support issue with AI features: users attempting tasks they're not set up to complete.
+Skipping this section is the most common cause of support tickets for AI features: users attempting tasks they're not set up to complete.
 
 ---
 

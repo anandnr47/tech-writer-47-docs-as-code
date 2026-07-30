@@ -47,24 +47,24 @@ How many users are reaching each page. On its own, this doesn't tell you much. C
 
 ## The Analysis Loop
 
-Every improvement cycle works through five questions.
+Every improvement cycle works through five steps.
 
-**1. Why do users come?**
+**1. User intent**
 Check top user intents. What are people actually trying to do?
 
-**2. Did they succeed?**
+**2. Success rate**
 Check intent-level success rates. Where are users failing?
 
-**3. Why did they fail?**
+**3. Failure reasons**
 Review open-text feedback:
 - Missing information: the answer isn't there
 - Lack of clarity: the answer is there but not understood
 - Confusing structure: the page organisation is the problem
 
-**4. How did they feel?**
+**4. Sentiment**
 Check thumbs up/down ratios over time.
 
-**5. What to fix first?**
+**5. Prioritisation**
 Combine traffic and outcome data:
 
 | Traffic | Task Completion | Priority | What it means |

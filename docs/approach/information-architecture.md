@@ -5,7 +5,7 @@ title: Information Architecture
 
 # Information Architecture
 
-Good information architecture is invisible. Users find what they need without noticing the structure. Bad IA is very visible — users scroll past things they need, click into the wrong section, and give up.
+Good information architecture is invisible. Users find what they need without noticing the structure. Bad IA is very visible: users scroll past things they need, click into the wrong section, and give up.
 
 This page explains the structural decisions behind this portfolio.
 
@@ -27,7 +27,7 @@ If you put both in the same navigation, reference users wade through tutorial pr
 
 Getting Started could reasonably sit under Tutorials. I put it under API Reference because of what it actually does.
 
-The Getting Started guide is onboarding for the API — it explains how to authenticate and make a first call. Its primary audience is a developer who just signed up and wants to know if the API works. That's a reference use case: "I need to make a working call right now."
+The Getting Started guide is onboarding for the API: it explains how to authenticate and make a first call. Its primary audience is a developer who just signed up and wants to know if the API works. That's a reference use case: "I need to make a working call right now."
 
 Tutorials, by contrast, are for deeper learning: how JWTs work, how to set up Sphinx, how htop reads CPU metrics. Those pages exist to build understanding, not to get someone unblocked.
 
@@ -43,7 +43,7 @@ A single long page works when the reader is likely to read everything. It works 
 
 Separate pages also make each agent linkable. The Test Readiness Agent has its own URL because it's the most technically detailed piece and worth featuring on its own (it's in the landing page spotlight). A section on a longer page can't be featured that way.
 
-The trade-off: a reader who wants an overview has to navigate between pages. That's why the Projects Overview page exists — it's the single-page summary, with links for readers who want depth.
+The trade-off: a reader who wants an overview has to navigate between pages. That's why the Projects Overview page exists as a single-page summary with links for readers who want depth.
 
 ---
 
@@ -72,14 +72,14 @@ The decisions made for 15 pages are not the same decisions you'd make for 500. P
 
 ## What I'd Deprecate
 
-Most documentation teams are better at adding content than removing it. Over time, documentation sets accumulate pages that are outdated, redundant, or simply not useful to anyone. This is as much an IA problem as a content problem — dead pages dilute navigation, confuse search results, and create maintenance overhead.
+Most documentation teams are better at adding content than removing it. Over time, documentation sets accumulate pages that are outdated, redundant, or simply not useful to anyone. This is as much an IA problem as a content problem. Dead pages dilute navigation, confuse search results, and create maintenance overhead.
 
 In this portfolio, if I were maintaining it as a live product doc set, here's what I'd consider cutting or consolidating:
 
 **The fictional API samples (login, users) once real API docs exist.**
 The login and users API pages demonstrate writing patterns but document a fictional API. In a real product context, they'd be replaced by actual endpoint documentation. Keeping fictional samples alongside real ones creates a confusing signal for users trying to understand the actual product.
 
-**The `dummy.md` placeholder** was already removed early in this project. Its existence was a reminder that placeholder content is worse than no content — it takes up navigation space and tells users nothing.
+**The `dummy.md` placeholder** was already removed early in this project. Its existence was a reminder that placeholder content is worse than no content: it takes up navigation space and tells users nothing.
 
 **The Getting Started and Authentication guides** currently live under API Reference. At scale, if the product had a proper developer portal with onboarding flows, these would likely be replaced by interactive quickstarts and the static Markdown versions would be deprecated.
 
@@ -89,13 +89,13 @@ The broader principle: every page should earn its place by serving a measurable 
 
 ## On Search vs Navigation
 
-One thing this portfolio doesn't have is search. At 15 pages, it doesn't need it — the sidebar is the navigation. But this is worth noting as an explicit IA decision.
+One thing this portfolio doesn't have is search. At 15 pages, it doesn't need it. The sidebar is the navigation. But this is worth noting as an explicit IA decision.
 
 At scale, navigation and search serve different users:
 
 - Navigation serves users who are exploring or who already know roughly where something is
 - Search serves users who have a specific question and want the fastest path to the answer
 
-When a documentation set grows past 50–100 pages, most users default to search. The sidebar becomes secondary. At that point, the IA investment shifts — less time on sidebar hierarchy, more time on page titles, headings, and metadata that make pages findable.
+When a documentation set grows past 50–100 pages, most users default to search. The sidebar becomes secondary. At that point, the IA investment shifts: less time on sidebar hierarchy, more time on page titles, headings, and metadata that make pages findable.
 
 This portfolio's IA is optimised for navigation because that's the right call at its current scale. That decision would change at 10x the page count.

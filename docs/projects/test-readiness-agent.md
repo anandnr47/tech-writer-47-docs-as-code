@@ -245,7 +245,7 @@ Review the confirmation notification for every run. If the agent updated the wro
 | **LLM proxy must be running** | The agent requires a locally running LLM proxy. |
 | **Mail client must be open (desktop mode only)** | When using local mail client fallback, the client must be open. Configure Graph API credentials to avoid this. |
 | **No scheduled polling yet** | The agent must be triggered manually. With Graph API configured, scheduled polling (e.g. via Windows Task Scheduler) is possible and planned. |
-| **Race condition with multiple machines** | If multiple team members run the agent simultaneously against the same shared mailbox, two machines may pick up the same email. The documentation system's hash-based optimistic locking prevents corrupt writes, but an update could be missed and would need re-running. **Recommended approach:** Run the agent on one designated machine. Writers forward emails and receive notifications — they don't need to run the agent themselves. |
+| **Race condition with multiple machines** | If multiple team members run the agent simultaneously against the same shared mailbox, two machines may pick up the same email. The documentation system's hash-based optimistic locking prevents corrupt writes, but an update could be missed and would need re-running. **Recommended approach:** Run the agent on one designated machine. Writers forward emails and receive notifications. They don't need to run the agent themselves. |
 
 ---
 
@@ -260,7 +260,7 @@ Review the confirmation notification for every run. If the agent updated the wro
 
 **The email parser is fragile on unusual formats.** The agent handles most PM emails well, but very long emails with multiple unrelated topics in a single message sometimes result in partial processing. I'd add a pre-processing step that splits compound emails into separate requests before parsing.
 
-**Logs are local only.** Right now each machine stores its own run logs. If three people on the team could theoretically run the agent, you end up with logs spread across three machines. A centralised log — even just a shared folder or a summary emailed to the team — would make auditing much simpler. This is on the roadmap but not yet built.
+**Logs are local only.** Right now each machine stores its own run logs. If three people on the team could theoretically run the agent, you end up with logs spread across three machines. A centralised log (even just a shared folder or a summary emailed to the team) would make auditing much simpler. This is on the roadmap but not yet built.
 
 **There's no dry-run mode.** Before running against a real deliverable, it would be useful to see what the agent *would* do without actually doing it. A `--dry-run` flag that prints the planned updates without writing them would reduce the risk of incorrect updates and make it easier to onboard new users.
 

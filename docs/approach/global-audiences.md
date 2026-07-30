@@ -11,7 +11,7 @@ Writing for a global audience is different from writing for a known enterprise u
 
 ## The Baseline: Plain Language
 
-Most documentation style guides recommend plain language. For global audiences, plain language isn't a recommendation — it's a requirement.
+Most documentation style guides recommend plain language. For global audiences, plain language isn't a recommendation. It's a requirement.
 
 The practical rules:
 
@@ -31,7 +31,7 @@ The practical rules:
 
 For global audiences, terminology consistency matters more than it does for a single-region product. Users who read documentation in translation are relying on consistent term usage because they're often cross-referencing translated docs against the product UI.
 
-If the docs say "invoice" but the product UI says "bill" — that's a minor friction point for an English speaker. For a user reading a machine-translated version of the docs while navigating a localised UI, it can be genuinely confusing.
+If the docs say "invoice" but the product UI says "bill," that's a minor friction point for an English speaker. For a user reading a machine-translated version of the docs while navigating a localised UI, it can be genuinely confusing.
 
 Rules I apply:
 
@@ -92,6 +92,6 @@ Writing for an enterprise product with a known user base, you can make assumptio
 
 Writing for a global developer audience at scale, you can't make those assumptions. Your readers include first-year developers learning to code, senior engineers at large companies, users in countries where internet access is intermittent and documentation is saved locally, and users who are reading a translation of your work made by a machine.
 
-The documentation that works for all of them is clear, predictable, and complete. Not clever. Not personality-driven. Not optimised for the reader who already knows the product. Optimised for the reader who doesn't.
+The documentation that works for all of them is clear, predictable, and complete — not clever, not personality-driven, not optimised for the reader who already knows the product. Optimised for the reader who doesn't.
 
 That's a harder standard to write to. It's also a more honest one.
