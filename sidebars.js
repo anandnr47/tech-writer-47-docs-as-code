@@ -23,6 +23,7 @@ module.exports = {
         'tutorials/sphinx-getting-started',
         'tutorials/installing-htop',
         'tutorials/how-jwts-work',
+        'tutorials/build-a-docs-site',
       ],
     },
     'release-notes',
