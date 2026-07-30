@@ -67,3 +67,35 @@ At 50+ pages, I'd restructure:
 - **Add a glossary.** Terms like "deliverable code," "release cycle," and "scope item" appear across multiple pages. A glossary reduces repetition and gives users a single place to check terminology.
 
 The decisions made for 15 pages are not the same decisions you'd make for 500. Part of IA work is knowing when the structure you have will stop scaling.
+
+---
+
+## What I'd Deprecate
+
+Most documentation teams are better at adding content than removing it. Over time, documentation sets accumulate pages that are outdated, redundant, or simply not useful to anyone. This is as much an IA problem as a content problem — dead pages dilute navigation, confuse search results, and create maintenance overhead.
+
+In this portfolio, if I were maintaining it as a live product doc set, here's what I'd consider cutting or consolidating:
+
+**The fictional API samples (login, users) once real API docs exist.**
+The login and users API pages demonstrate writing patterns but document a fictional API. In a real product context, they'd be replaced by actual endpoint documentation. Keeping fictional samples alongside real ones creates a confusing signal for users trying to understand the actual product.
+
+**The `dummy.md` placeholder** was already removed early in this project. Its existence was a reminder that placeholder content is worse than no content — it takes up navigation space and tells users nothing.
+
+**The Getting Started and Authentication guides** currently live under API Reference. At scale, if the product had a proper developer portal with onboarding flows, these would likely be replaced by interactive quickstarts and the static Markdown versions would be deprecated.
+
+The broader principle: every page should earn its place by serving a measurable user need. If you can't point to a user intent a page satisfies, it's a candidate for removal.
+
+---
+
+## On Search vs Navigation
+
+One thing this portfolio doesn't have is search. At 15 pages, it doesn't need it — the sidebar is the navigation. But this is worth noting as an explicit IA decision.
+
+At scale, navigation and search serve different users:
+
+- Navigation serves users who are exploring or who already know roughly where something is
+- Search serves users who have a specific question and want the fastest path to the answer
+
+When a documentation set grows past 50–100 pages, most users default to search. The sidebar becomes secondary. At that point, the IA investment shifts — less time on sidebar hierarchy, more time on page titles, headings, and metadata that make pages findable.
+
+This portfolio's IA is optimised for navigation because that's the right call at its current scale. That decision would change at 10x the page count.

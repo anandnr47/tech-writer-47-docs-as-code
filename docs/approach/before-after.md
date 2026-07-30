@@ -91,3 +91,59 @@ The rewritten page covers:
 Good documentation isn't about making things longer. Both rewrites are longer than the originals, but that's because the originals were missing information users need, not because more words are better.
 
 The question I ask when editing is: what will the user try to do with this, and does this page help them do it? If the answer is no, the page needs work regardless of how polished the prose is.
+
+---
+
+## Example 3: From Raw Engineer Notes to Documentation
+
+This example shows a different part of the process — starting from raw notes rather than an existing doc.
+
+### The Input
+
+These are the kind of notes a developer might hand over before a documentation interview or review session:
+
+```
+webhook system
+- registers endpoints
+- sends POST on events
+- events: user.created, user.updated, invoice.paid etc
+- payload has id, type, created_at, data.object
+- signature verification - HMAC-SHA256, header X-Webhook-Signature
+- retries: 5 times, exponential backoff (1min, 5min, 30min, 2hr)
+- endpoint must return 200 in 10s or counted as failed
+- idempotency important, use event id
+- logs kept 30 days
+- auto-disable if >50% failure in 24hr
+```
+
+This is fairly detailed for raw notes. More often you get half this much, and you fill gaps in a follow-up interview.
+
+### What I Do With It
+
+Before writing anything, I work out what the reader needs that isn't in these notes:
+
+- **How do I register a webhook?** Notes say the system "registers endpoints" but no API call.
+- **What does the full payload look like?** Notes list fields but no example.
+- **How do I verify signatures in practice?** Notes mention HMAC-SHA256 but no code.
+- **What happens to my webhook if it keeps failing?** Notes mention auto-disable but no user-facing detail.
+- **How do I handle receiving the same event twice?** Notes mention idempotency but not how.
+
+These gaps come from an interview or follow-up Slack message. The engineer knows the answers — they just didn't think to write them down because they're obvious to someone who built the system.
+
+### After
+
+The output is the [Webhooks](/api/webhooks) page in this portfolio — a full API reference page covering registration, payload structure, event types, signature verification with code, retry behaviour, duplicate handling, and best practices.
+
+### What Changed and Why
+
+**Structure came from user goals, not the notes.**
+The notes are organised by implementation detail. The documentation is organised by what a developer needs to do: register a webhook, understand the payload, verify signatures, handle failures. These are different orderings of the same information.
+
+**The gaps were as important as what was there.**
+Signature verification is one sentence in the notes. It's a full section with a code example in the docs, because this is the step developers most commonly skip and then wonder why their integration is insecure.
+
+**Retry behaviour needed user-facing framing.**
+"Exponential backoff (1min, 5min, 30min, 2hr)" is implementation detail. What a developer actually needs to know is: how long do I have to fix my endpoint before a delivery is abandoned? The docs answer that question, not the underlying mechanism.
+
+**Best practices came from the gaps.**
+Nothing in the notes says "respond quickly and process asynchronously." That best practice came from knowing that the most common webhook integration mistake is doing expensive processing synchronously, causing timeouts. The engineer didn't write it down because it's second nature to them. It's not second nature to a developer integrating webhooks for the first time.
