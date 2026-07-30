@@ -25,7 +25,7 @@ module.exports = {
           sidebarId: 'apiSidebar',
         },
         {
-          to: '/tutorials/getting-started',
+          to: '/tutorials/sphinx-getting-started',
           label: 'Tutorials',
           position: 'left',
           sidebarId: 'tutorialSidebar',
