@@ -263,14 +263,40 @@ Your documentation site is live.
 
 ## How Updates Work
 
-From this point on, the process is:
+From this point on you have two options for editing content.
 
-1. Edit a Markdown file (locally or directly on GitHub.com)
-2. Commit and push to `main`
-3. GitHub Actions automatically runs the build and deploy
-4. Your site updates within 2–3 minutes
+### Option A: Edit directly on GitHub.com (simpler)
 
-You never need to manually deploy.
+1. Go to your repo on GitHub.com
+2. Navigate to any file in `docs/`
+3. Click the pencil icon to edit
+4. Make your changes and click **Commit changes**
+5. GitHub Actions runs automatically and your site updates in 2–3 minutes
+
+No terminal needed. Good for editing existing pages or adding new Markdown files.
+
+### Option B: Work locally (recommended for larger changes)
+
+Clone the repo to your machine first:
+
+```bash
+git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+cd YOUR-REPO-NAME
+npm install
+npm start
+```
+
+`npm start` opens a live preview at `http://localhost:3000` so you can see changes before publishing.
+
+When you're happy with your changes:
+
+```bash
+git add .
+git commit -m "Describe what you changed"
+git push
+```
+
+GitHub Actions picks up the push and deploys automatically. Working locally is better when you're adding multiple files, restructuring the sidebar, or making changes you want to preview first.
 
 ---
 
