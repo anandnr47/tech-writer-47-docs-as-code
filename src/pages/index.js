@@ -41,7 +41,7 @@ function Hero() {
         <div className={styles.openBadge} aria-label="Status: Open to new opportunities">✦ Open to new opportunities</div>
         <h1 className={styles.heroTitle}>Anand — Technical Writer</h1>
         <p className={styles.heroSubtitle}>
-          10 years across banking, semiconductors, SaaS, and enterprise software. Specializing in{' '}
+          10+ years across banking, semiconductors, SaaS, and enterprise software. Specializing in{' '}
           <TypingText />
         </p>
         <div className={styles.industryPills} role="list" aria-label="Industries">
@@ -96,7 +96,7 @@ function QuoteBar() {
     <div className={styles.quoteBar}>
       <div className="container">
         <blockquote className={styles.quote}>
-          "Good documentation doesn't just explain what a product does — it makes users confident enough to act."
+          "Good documentation doesn't just explain what a product does, it makes users confident enough to act."
         </blockquote>
       </div>
     </div>
@@ -123,8 +123,8 @@ function FadeIn({ children, delay = 0 }) {
 
 function WhatIBring() {
   const items = [
-    { icon: '🏗️', iconLabel: 'Building blocks', title: 'Doc Architecture', description: 'I figure out what needs to exist, how to structure it, and how users navigate it — before writing a single word.' },
-    { icon: '💡', iconLabel: 'Light bulb', title: 'Clarity', description: "Whether it's a REST API or a semiconductor subsystem, I make the underlying logic clear — not just the steps." },
+    { icon: '🏗️', iconLabel: 'Building blocks', title: 'Doc Architecture', description: 'I figure out what needs to exist, how to structure it, and how users navigate it, before writing a single word.' },
+    { icon: '💡', iconLabel: 'Light bulb', title: 'Clarity', description: "Whether it's a REST API or a semiconductor subsystem, I make the underlying logic clear, not just the steps." },
     { icon: '🛠️', iconLabel: 'Tools', title: 'Developer Tools', description: 'Git, Docusaurus, DITA, Oxygen XML, Ixiasoft CCMS. I work in the same environment as the engineers.' },
   ];
   return (
