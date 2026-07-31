@@ -29,6 +29,12 @@ A reusable documentation template for AI agents — built for consistency across
 
 ## Documentation Analytics Framework
 
-A standardized framework for measuring documentation effectiveness using self-service rates, task completion, and user feedback — then closing the loop by prioritizing improvements based on impact.
+A standardized framework for measuring documentation effectiveness using self-service rates, task completion, and user feedback, then closing the loop by prioritizing improvements based on impact.
 
 [Read more →](/projects/analytics-framework)
+
+## Doc Feedback Widget
+
+A React component that adds thumbs up/down feedback collection to any documentation page. The data collection layer for the analytics framework.
+
+[Read more →](/projects/feedback-widget)
