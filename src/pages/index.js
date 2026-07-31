@@ -207,8 +207,11 @@ function CTAStrip() {
               <a className="button button--primary button--lg" href="https://www.linkedin.com/in/anand-athankavil/" target="_blank" rel="noopener noreferrer">
                 Connect on LinkedIn →
               </a>
-              <a className="button button--secondary button--lg" href="/tech-writer-47-docs-as-code/anand_a_tech_writer.pdf" target="_blank" rel="noopener noreferrer" download>
-                Download Resume
+              <a className="button button--secondary button--lg" href="/tech-writer-47-docs-as-code/anand_resume_ats.html" target="_blank" rel="noopener noreferrer">
+                View Resume
+              </a>
+              <a className={`button button--lg ${styles.btnOutline}`} href="/tech-writer-47-docs-as-code/Anand%20A%20%E2%80%93%20Senior%20User%20Assistance%20Developer.pdf" target="_blank" rel="noopener noreferrer" download>
+                Download PDF
               </a>
             </div>
           </div>

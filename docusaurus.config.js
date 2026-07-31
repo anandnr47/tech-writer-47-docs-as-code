@@ -36,6 +36,11 @@ module.exports = {
           position: 'right',
           sidebarId: 'projectsSidebar',
         },
+        {
+          href: '/tech-writer-47-docs-as-code/anand_resume_ats.html',
+          label: 'Resume',
+          position: 'right',
+        },
       ],
     },
     footer: {
