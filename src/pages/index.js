@@ -44,8 +44,10 @@ function Hero() {
           Senior Technical Writer <span className={styles.roleSep}>•</span> Docs-as-Code Practitioner <span className={styles.roleSep}>•</span> Writer Who Ships
         </p>
         <p className={styles.heroSubtitle}>
-          I make developer docs that developers actually read. Specializing in{' '}
-          <TypingText />
+          I make developer docs that developers actually read.
+        </p>
+        <p className={styles.heroTyping}>
+          Specializing in <TypingText />
         </p>
         <div className={styles.industryPills} role="list" aria-label="Industries">
           {['Banking', 'Semiconductors', 'SaaS', 'Enterprise Software', 'Procurement'].map((i) => (
