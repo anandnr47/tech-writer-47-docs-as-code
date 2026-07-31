@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet"/>
+  <title>Anand A – Senior User Assistance Developer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Lato', 'Arial', sans-serif;
+      font-size: 10.5pt;
+      color: #1a1a1a;
+      background: #fff;
+      max-width: 820px;
+      margin: 40px auto;
+      padding: 40px 50px;
+      line-height: 1.5;
+    }
+
+    /* ── Header ── */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 18px;
+    }
+    .header-photo {
+      flex-shrink: 0;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ddd;
+    }
+    .header-photo-placeholder {
+      flex-shrink: 0;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: #f0f0f0;
+      border: 2px dashed #bbb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8pt;
+      color: #999;
+      text-align: center;
+      line-height: 1.3;
+    }
+    .header-text { flex: 1; }
+    .header-text h1 { font-size: 22pt; font-weight: 900; letter-spacing: 0.5px; }
+    .header-text .title { font-size: 11.5pt; color: #444; margin: 4px 0 8px; font-weight: 400; }
+    .header-text .contact { font-size: 9.5pt; color: #333; }
+    .header-text .contact a { color: #1a5fa8; text-decoration: none; }
+
+    /* ── Section headings ── */
+    h2 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1a1a1a;
+      border-bottom: 1.5px solid #1a1a1a;
+      padding-bottom: 3px;
+      margin: 20px 0 10px;
+    }
+
+    /* ── Summary ── */
+    .summary p { font-size: 10pt; color: #222; }
+
+    /* ── Job block ── */
+    .job { margin-bottom: 14px; page-break-inside: avoid; break-inside: avoid; }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+    .job-header .left { font-weight: 700; font-size: 10.5pt; }
+    .job-header .right {
+      font-size: 9.5pt;
+      color: #555;
+      white-space: nowrap;
+    }
+    .job-header .company { color: #1a5fa8; font-weight: 700; }
+    .job ul {
+      margin: 5px 0 0 16px;
+      list-style-type: disc;
+    }
+    .job ul li {
+      font-size: 10pt;
+      margin-bottom: 3px;
+      color: #222;
+    }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 30px;
+    }
+    .skill-row { font-size: 10pt; }
+    .skill-row strong { color: #1a1a1a; }
+
+    /* ── Education ── */
+    .edu-block { margin-bottom: 8px; }
+    .edu-block .deg { font-weight: 700; font-size: 10.5pt; }
+    .edu-block .school { font-size: 10pt; color: #444; }
+
+    /* ── Print ── */
+    @page { margin: 0.5in; }
+    @media print {
+      body { margin: 0; padding: 30px 40px; }
+      a { color: #1a1a1a !important; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <!-- PHOTO: replace src with your image path, e.g. src="photo.jpg" -->
+    <img class="header-photo" src="passport.jpg" alt="Anand A" />
+    <div class="header-text">
+      <h1>ANAND A</h1>
+      <div class="title">Senior User Assistance Developer | Software Documentation</div>
+      <div class="contact">
+        8147565461 &nbsp;|&nbsp;
+        <a href="mailto:anandnr47@gmail.com">anandnr47@gmail.com</a> &nbsp;|&nbsp;
+        <a href="https://www.linkedin.com/in/anand-athankavil/">linkedin.com/in/anand-athankavil</a> &nbsp;|&nbsp;
+        <a href="https://anandnr47.github.io/tech-writer-47-docs-as-code/">Portfolio</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <h2>Professional Summary</h2>
+  <div class="summary">
+    <p>
+      Senior User Assistance Developer with 10+ years of experience delivering technical documentation
+      for enterprise SaaS, semiconductor IP, and cloud platforms. Proven ability to own end-to-end
+      documentation — from information architecture and structured DITA authoring to AI-assisted
+      workflows and analytics-driven quality improvement. Deep expertise in API documentation,
+      Swagger/OpenAPI, and cross-functional collaboration with engineering, product, and UX teams.
+      Strong background in structured authoring (DITA, FrameMaker, Oxygen XML) combined with
+      hands-on systems engineering experience that enables fast ramp-up on complex technical domains.
+    </p>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <h2>Professional Experience</h2>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="left"><span class="company">SAP Ariba</span> — User Assistance Developer</span>
+      <span class="right">March 2022 – Present</span>
+    </div>
+    <ul>
+      <li>Own and maintain ~400 topics across enterprise procurement products, covering user guides, What's New content, and API documentation for a global customer base.</li>
+      <li>Leading agentic AI initiatives for documentation that have gained visibility at the SAP procurement leadership level — scoping and driving adoption of LLM-based workflows to accelerate content delivery.</li>
+      <li>Drove analytics-based documentation improvements that increased self-service rates from 62% to 85% and task completion rates from 71% to 90% across the documentation framework.</li>
+      <li>Maintained a positive feedback rating of 86% on owned product documentation, consistently sustaining or improving the score each quarter.</li>
+      <li>Designed and launched a Qualtrics-based customer feedback form; improvements made in response to feedback raised the product documentation satisfaction score from 3.2 to 4.1, including delivery of a new Getting Started guide.</li>
+      <li>Defined and implemented a User Assistance (UA) plan adopted across the full documentation team, standardizing content structure and peer-review workflows.</li>
+      <li>Reviewed and improved UI copy, error messages, and peer documentation to align with UX writing standards and product voice.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="left"><span class="company">Synopsys</span> — Senior Technical Writer</span>
+      <span class="right">May 2019 – March 2022</span>
+    </div>
+    <ul>
+      <li>Documented Interface IP solutions across PCIe, HDMI 2.1 (Rx/Tx), Ethernet, and USB 3.0 — producing databooks, user guides, installation guides, and release notes for global semiconductor customers.</li>
+      <li>Mentored 4 technical writers, each of whom independently took on separate documentation sets — structured training materials that reduced ramp-up time significantly.</li>
+      <li>Designed a Visio graphics template adopted team-wide to standardize diagrams across all IP documentation sets, improving visual consistency and reducing per-topic production time.</li>
+      <li>Updated DITA style guides, EDD, and DTD to reflect evolving product architecture and authoring tool requirements.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="left"><span class="company">Edgeverve</span> — Technical Writer</span>
+      <span class="right">May 2018 – May 2019</span>
+    </div>
+    <ul>
+      <li>Documented Finacle Core Banking Solution (Loans, Wealth Management, LMS) — authored user manuals, release notes, and REST API documentation.</li>
+      <li>Increased documentation usage by 20% by creating demo videos and flow diagrams for complex banking workflows.</li>
+      <li>Restructured the LMS manual to improve user experience and reduce navigation complexity.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="left"><span class="company">Infosys</span> — Sr. Systems Engineer / Systems Engineer</span>
+      <span class="right">Oct 2014 – April 2018</span>
+    </div>
+    <ul>
+      <li>Infrastructure migration consultant for Citizens Financial Group — prepared SRS, BRD, FRD, and migration strategy documents; migrated web, client, and database applications from Windows 2008 to 2012.</li>
+      <li>Built internal automation tools to streamline server inventory collection and team onboarding across accounts.</li>
+    </ul>
+  </div>
+
+  <!-- SKILLS -->
+  <h2>Core Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-row"><strong>Technical Documentation:</strong> User guides, API docs, release notes, What's New, installation guides, databooks</div>
+    <div class="skill-row"><strong>Structured Authoring:</strong> DITA, topic-based authoring, EDD, DTD, information architecture</div>
+    <div class="skill-row"><strong>API Documentation:</strong> Swagger, OpenAPI, REST API docs</div>
+    <div class="skill-row"><strong>AI &amp; Analytics:</strong> LLM-assisted workflows, content analytics, feedback-driven optimization</div>
+    <div class="skill-row"><strong>Authoring Tools:</strong> Adobe FrameMaker, Oxygen XML Author, Markdown, VBA</div>
+    <div class="skill-row"><strong>UX &amp; Content Design:</strong> UI text review, error messages, flow diagrams, demo videos (Camtasia)</div>
+    <div class="skill-row"><strong>Collaboration Tools:</strong> Jira, GitHub, SharePoint, Qualtrics</div>
+    <div class="skill-row"><strong>Cross-functional:</strong> Engineering reviews, stakeholder alignment, mentoring, style guide ownership</div>
+  </div>
+
+  <!-- EDUCATION -->
+  <h2>Education</h2>
+  <div class="edu-block">
+    <div class="deg">Master of Technology — Embedded Systems</div>
+    <div class="school">Amrita School of Engineering | 2012–2014 | CGPA: 8.56</div>
+  </div>
+  <div class="edu-block">
+    <div class="deg">Bachelor of Technology — Electronics and Communication Engineering</div>
+    <div class="school">Dr NGP Institute of Technology| 2008–2012 | CGPA: 8.4</div>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <h2>Certifications</h2>
+  <div class="job">
+    <ul>
+      <li>BULATS English Test — University of Cambridge</li>
+    </ul>
+  </div>
+
+</body>
+</html>
