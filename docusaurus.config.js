@@ -15,26 +15,31 @@ module.exports = {
         {
           to: '/intro',
           label: 'About',
-          position: 'left',
+          position: 'right',
           sidebarId: 'aboutSidebar',
         },
         {
           to: '/api/github-issues',
           label: 'API Reference',
-          position: 'left',
+          position: 'right',
           sidebarId: 'apiSidebar',
         },
         {
           to: '/tutorials/sphinx-getting-started',
           label: 'Tutorials',
-          position: 'left',
+          position: 'right',
           sidebarId: 'tutorialSidebar',
         },
         {
           to: '/projects/projects-overview',
           label: 'Projects',
-          position: 'left',
+          position: 'right',
           sidebarId: 'projectsSidebar',
+        },
+        {
+          href: 'https://www.linkedin.com/in/anand-athankavil/',
+          label: 'Resume',
+          position: 'right',
         },
         {
           href: 'https://github.com/anandnr47/tech-writer-47-docs-as-code',

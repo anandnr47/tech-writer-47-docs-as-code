@@ -39,9 +39,12 @@ function Hero() {
     <header className={styles.heroBanner}>
       <div className="container">
         <div className={styles.openBadge} aria-label="Status: Open to new opportunities">✦ Open to new opportunities</div>
-        <h1 className={styles.heroTitle}>Anand — Technical Writer</h1>
+        <h1 className={styles.heroTitle}>Anand</h1>
+        <p className={styles.heroRoles}>
+          Senior Technical Writer <span className={styles.roleSep}>•</span> Docs-as-Code Practitioner <span className={styles.roleSep}>•</span> Writer Who Ships
+        </p>
         <p className={styles.heroSubtitle}>
-          10 years across banking, semiconductors, SaaS, and enterprise software. Specializing in{' '}
+          I make developer docs that developers actually read. Specializing in{' '}
           <TypingText />
         </p>
         <div className={styles.industryPills} role="list" aria-label="Industries">
@@ -59,6 +62,14 @@ function Hero() {
           <Link className={`button button--lg ${styles.btnOutline}`} to="/projects/projects-overview">
             View Projects
           </Link>
+          <a
+            className={`button button--lg ${styles.btnOutline}`}
+            href="https://www.linkedin.com/in/anand-athankavil/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download Resume
+          </a>
           <Link className={`button button--lg ${styles.btnOutline}`} to="/intro">
             About Me
           </Link>
@@ -208,6 +219,45 @@ function CTAStrip() {
   );
 }
 
+function ContactWidget() {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <>
+      <button
+        className={styles.chatBtn}
+        onClick={() => setOpen(o => !o)}
+        aria-label="Contact Anand"
+      >
+        {open ? '✕' : '💬'}
+      </button>
+      {open && (
+        <div className={styles.chatBox}>
+          <div className={styles.chatHeader}>Get in touch</div>
+          <div className={styles.chatBody}>
+            <p>Have a question or want to discuss a role?</p>
+            <a
+              href="mailto:anand.athankavil@gmail.com"
+              className={`button button--primary`}
+              style={{ width: '100%', textAlign: 'center', marginBottom: '0.5rem', display: 'block' }}
+            >
+              Send an email
+            </a>
+            <a
+              href="https://www.linkedin.com/in/anand-athankavil/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`button button--secondary`}
+              style={{ width: '100%', textAlign: 'center', display: 'block' }}
+            >
+              Connect on LinkedIn
+            </a>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -232,6 +282,7 @@ export default function Home() {
         </section>
       </main>
       <CTAStrip />
+      <ContactWidget />
     </Layout>
   );
 }
