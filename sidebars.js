@@ -39,6 +39,7 @@ module.exports = {
         'projects/ai-agents',
         'projects/analytics-framework',
         'projects/feedback-widget',
+        'projects/llm-auto-glossary',
         'projects/content-strategy',
         'projects/ai-agent-doc-template',
         'projects/test-readiness-agent',

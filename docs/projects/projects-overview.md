@@ -38,3 +38,9 @@ A standardized framework for measuring documentation effectiveness using self-se
 A React component that adds thumbs up/down feedback collection to any documentation page. The data collection layer for the analytics framework.
 
 [Read more →](/projects/feedback-widget)
+
+## LLM Auto Glossary
+
+A Python script that scans documentation files and uses an LLM to generate a structured Markdown glossary. The creation counterpart to the terminology consistency agent.
+
+[Read more →](/projects/llm-auto-glossary)
