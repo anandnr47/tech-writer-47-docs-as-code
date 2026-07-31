@@ -37,7 +37,7 @@ module.exports = {
           sidebarId: 'projectsSidebar',
         },
         {
-          href: 'https://www.linkedin.com/in/anand-athankavil/',
+          href: '/tech-writer-47-docs-as-code/anand_a_tech_writer.pdf',
           label: 'Resume',
           position: 'right',
         },

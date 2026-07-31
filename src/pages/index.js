@@ -64,9 +64,10 @@ function Hero() {
           </Link>
           <a
             className={`button button--lg ${styles.btnOutline}`}
-            href="https://www.linkedin.com/in/anand-athankavil/"
+            href="/tech-writer-47-docs-as-code/anand_a_tech_writer.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            download
           >
             Download Resume
           </a>
@@ -107,7 +108,7 @@ function QuoteBar() {
     <div className={styles.quoteBar}>
       <div className="container">
         <blockquote className={styles.quote}>
-          "Good documentation doesn't just explain what a product does — it makes users confident enough to act."
+          "Good documentation doesn't just explain what a product does, it makes users confident enough to act."
         </blockquote>
       </div>
     </div>
@@ -134,8 +135,8 @@ function FadeIn({ children, delay = 0 }) {
 
 function WhatIBring() {
   const items = [
-    { icon: '🏗️', iconLabel: 'Building blocks', title: 'Doc Architecture', description: 'I figure out what needs to exist, how to structure it, and how users navigate it — before writing a single word.' },
-    { icon: '💡', iconLabel: 'Light bulb', title: 'Clarity', description: "Whether it's a REST API or a semiconductor subsystem, I make the underlying logic clear — not just the steps." },
+    { icon: '🏗️', iconLabel: 'Building blocks', title: 'Doc Architecture', description: 'I figure out what needs to exist, how to structure it, and how users navigate it, before writing a single word.' },
+    { icon: '💡', iconLabel: 'Light bulb', title: 'Clarity', description: "Whether it's a REST API or a semiconductor subsystem, I make the underlying logic clear, not just the steps." },
     { icon: '🛠️', iconLabel: 'Tools', title: 'Developer Tools', description: 'Git, Docusaurus, DITA, Oxygen XML, Ixiasoft CCMS. I work in the same environment as the engineers.' },
   ];
   return (
