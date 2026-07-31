@@ -41,11 +41,6 @@ module.exports = {
           label: 'Resume',
           position: 'right',
         },
-        {
-          href: 'https://github.com/anandnr47/tech-writer-47-docs-as-code',
-          label: 'GitHub',
-          position: 'right',
-        },
       ],
     },
     footer: {
