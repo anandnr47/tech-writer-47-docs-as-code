@@ -62,15 +62,6 @@ function Hero() {
           <Link className={`button button--lg ${styles.btnOutline}`} to="/projects/projects-overview">
             View Projects
           </Link>
-          <a
-            className={`button button--lg ${styles.btnOutline}`}
-            href="/tech-writer-47-docs-as-code/anand_a_tech_writer.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            download
-          >
-            Download Resume
-          </a>
           <Link className={`button button--lg ${styles.btnOutline}`} to="/intro">
             About Me
           </Link>
@@ -210,9 +201,14 @@ function CTAStrip() {
           <div className={styles.ctaInner}>
             <h2 className={styles.ctaTitle}>Looking for a technical writer?</h2>
             <p className={styles.ctaDesc}>I'm open to full-time roles and contract engagements in developer tools, SaaS, and enterprise software.</p>
-            <a className="button button--primary button--lg" href="https://www.linkedin.com/in/anand-athankavil/" target="_blank" rel="noopener noreferrer">
-              Connect on LinkedIn →
-            </a>
+            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <a className="button button--primary button--lg" href="https://www.linkedin.com/in/anand-athankavil/" target="_blank" rel="noopener noreferrer">
+                Connect on LinkedIn →
+              </a>
+              <a className="button button--secondary button--lg" href="/tech-writer-47-docs-as-code/anand_a_tech_writer.pdf" target="_blank" rel="noopener noreferrer" download>
+                Download Resume
+              </a>
+            </div>
           </div>
         </FadeIn>
       </div>
@@ -237,7 +233,7 @@ function ContactWidget() {
           <div className={styles.chatBody}>
             <p>Have a question or want to discuss a role?</p>
             <a
-              href="mailto:anand.athankavil@gmail.com"
+              href="mailto:anandnr47@gmail.com"
               className={`button button--primary`}
               style={{ width: '100%', textAlign: 'center', marginBottom: '0.5rem', display: 'block' }}
             >
